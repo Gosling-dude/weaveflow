@@ -1,6 +1,5 @@
 {
     "framework": "nextjs",
-    "buildCommand": "cd ../.. && npx turbo run build --filter=@weaveflow/web",
-    "installCommand": "cd ../.. && npm install",
-    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./"
+    "buildCommand": "prisma generate && next build",
+    "installCommand": "npm install"
 }
