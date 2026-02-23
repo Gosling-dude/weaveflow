@@ -18,14 +18,21 @@ type InputEdge = {
 
 export async function executeRun(params: {
   runId: string;
-  scope: "full" | "single" | "partial";
-  nodeIds?: string[];
-  nodes: InputNode[];
-  edges: InputEdge[];
 }) {
-  const selectedNodeSet = new Set(params.scope === "full" ? params.nodes.map((node) => node.id) : params.nodeIds ?? []);
-  const executionNodes = params.nodes.filter((node) => selectedNodeSet.has(node.id));
-  const executionEdges = params.edges.filter((edge) => selectedNodeSet.has(edge.source) && selectedNodeSet.has(edge.target));
+  const run = await prisma.run.findUnique({
+    where: { id: params.runId },
+    include: { nodes: true, workflow: true },
+  });
+  if (!run) return;
+
+  const runMeta = run.meta as { nodeIds?: string[]; nodes?: InputNode[]; edges?: InputEdge[]; nodeId?: string } | null;
+  const workflow = run.workflow as any;
+  const nodes = workflow ? workflow.nodes as InputNode[] : (runMeta?.nodes ?? []);
+  const edges = workflow ? workflow.edges as InputEdge[] : (runMeta?.edges ?? []);
+
+  const selectedNodeSet = new Set(run.type === "full" ? nodes.map((node) => node.id) : runMeta?.nodeIds ?? []);
+  const executionNodes = nodes.filter((node) => selectedNodeSet.has(node.id));
+  const executionEdges = edges.filter((edge) => selectedNodeSet.has(edge.source) && selectedNodeSet.has(edge.target));
 
   const topo = topologicalSort(
     executionNodes.map((node) => node.id),
@@ -37,111 +44,165 @@ export async function executeRun(params: {
     return;
   }
 
-  const nodeById = new Map(executionNodes.map((node) => [node.id, node]));
-  const executionEdgeMap = new Map<string, InputEdge[]>();
+  // Initial run kickoff: process the DAG
+  await proceedWithRun(params.runId, executionNodes, executionEdges);
+}
+
+export async function resumeRun(runId: string) {
+  const run = await prisma.run.findUnique({
+    where: { id: runId },
+    include: { nodes: true, workflow: true },
+  });
+  if (!run || run.status !== "running") return;
+
+  const runMeta = run.meta as { nodeIds?: string[]; nodes?: InputNode[]; edges?: InputEdge[]; nodeId?: string } | null;
+  const workflow = run.workflow as any;
+  const nodes = workflow ? workflow.nodes as InputNode[] : (runMeta?.nodes ?? []);
+  const edges = workflow ? workflow.edges as InputEdge[] : (runMeta?.edges ?? []);
+
+  const selectedNodeSet = new Set(run.type === "full" ? nodes.map((node) => node.id) : runMeta?.nodeIds ?? []);
+  const executionNodes = nodes.filter((node) => selectedNodeSet.has(node.id));
+  const executionEdges = edges.filter((edge) => selectedNodeSet.has(edge.source) && selectedNodeSet.has(edge.target));
+
+  await proceedWithRun(runId, executionNodes, executionEdges);
+}
+
+async function proceedWithRun(runId: string, executionNodes: InputNode[], executionEdges: InputEdge[]) {
+  const existingNodes = await prisma.runNode.findMany({ where: { runId } });
+  const completedNodeIds = new Set(existingNodes.filter(n => n.status === "success").map(n => n.nodeId));
+  const failedNodeIds = new Set(existingNodes.filter(n => n.status === "failed").map(n => n.nodeId));
+  const runningNodeIds = new Set(existingNodes.filter(n => n.status === "running").map(n => n.nodeId));
+
   const incoming = new Map<string, string[]>(executionNodes.map((node) => [node.id, []]));
-  const outgoing = new Map<string, string[]>(executionNodes.map((node) => [node.id, []]));
+  const executionEdgeMap = new Map<string, InputEdge[]>();
   for (const edge of executionEdges) {
     incoming.set(edge.target, [...(incoming.get(edge.target) ?? []), edge.source]);
-    outgoing.set(edge.source, [...(outgoing.get(edge.source) ?? []), edge.target]);
     executionEdgeMap.set(edge.target, [...(executionEdgeMap.get(edge.target) ?? []), edge]);
   }
 
-  const unresolvedDeps = new Map<string, number>(executionNodes.map((node) => [node.id, (incoming.get(node.id) ?? []).length]));
-  const readyQueue = executionNodes.filter((node) => (incoming.get(node.id) ?? []).length === 0).map((node) => node.id);
   const outputMap = new Map<string, unknown>();
-  const failedNodeSet = new Set<string>();
-  const startedAt = Date.now();
-
-  while (readyQueue.length) {
-    const currentBatch = [...readyQueue];
-    readyQueue.splice(0, readyQueue.length);
-
-    await Promise.all(
-      currentBatch.map(async (nodeId) => {
-        const node = nodeById.get(nodeId);
-        if (!node) return;
-
-        const dependencyIds = incoming.get(nodeId) ?? [];
-        if (dependencyIds.some((dependencyId) => failedNodeSet.has(dependencyId))) {
-          failedNodeSet.add(nodeId);
-          await prisma.runNode.create({
-            data: {
-              runId: params.runId,
-              nodeId,
-              status: "failed",
-              inputs: { skipped: true, reason: "Dependency failed" },
-              error: "Dependency failed",
-              startedAt: new Date(),
-              finishedAt: new Date(),
-              durationMs: 0,
-            },
-          });
-        } else {
-          const nodeStarted = Date.now();
-          await prisma.runNode.create({
-            data: {
-              runId: params.runId,
-              nodeId,
-              status: "running",
-              inputs: {
-                dependencies: dependencyIds.map((dependencyId) => ({ nodeId: dependencyId, output: safeJson(outputMap.get(dependencyId)) })),
-                data: safeJson(node.data),
-              },
-            },
-          });
-
-          try {
-            const output = await executeNodeThroughTrigger({
-              runId: params.runId,
-              node,
-              dependencyIds,
-              outputMap,
-              incomingEdges: executionEdgeMap.get(nodeId) ?? [],
-            });
-            outputMap.set(nodeId, output);
-
-            await prisma.runNode.updateMany({
-              where: { runId: params.runId, nodeId },
-              data: {
-                status: "success",
-                outputs: { output: safeJson(output) },
-                finishedAt: new Date(),
-                durationMs: Date.now() - nodeStarted,
-              },
-            });
-          } catch (error) {
-            failedNodeSet.add(nodeId);
-            await prisma.runNode.updateMany({
-              where: { runId: params.runId, nodeId },
-              data: {
-                status: "failed",
-                error: error instanceof Error ? error.message : "Unknown error",
-                finishedAt: new Date(),
-                durationMs: Date.now() - nodeStarted,
-              },
-            });
-          }
-        }
-
-        for (const nextNodeId of outgoing.get(nodeId) ?? []) {
-          const left = (unresolvedDeps.get(nextNodeId) ?? 1) - 1;
-          unresolvedDeps.set(nextNodeId, left);
-          if (left === 0) readyQueue.push(nextNodeId);
-        }
-      }),
-    );
+  for (const node of existingNodes) {
+    if (node.outputs) {
+      outputMap.set(node.nodeId, (node.outputs as any).output);
+    }
   }
 
-  const hasFailure = failedNodeSet.size > 0;
-  await prisma.run.update({
-    where: { id: params.runId },
-    data: {
-      status: hasFailure ? "partial" : "success",
-      finishedAt: new Date(),
-      durationMs: Date.now() - startedAt,
-    },
-  });
+  const readyQueue: InputNode[] = [];
+  const newlyFailedQueue: InputNode[] = [];
+  let isDone = true;
+
+  for (const node of executionNodes) {
+    if (completedNodeIds.has(node.id) || failedNodeIds.has(node.id)) {
+      continue;
+    }
+
+    isDone = false; // Still pending nodes
+    if (runningNodeIds.has(node.id)) {
+      continue;
+    }
+
+    const dependencies = incoming.get(node.id) ?? [];
+    const isReady = dependencies.every((depId) => completedNodeIds.has(depId));
+    const hasFailedDependency = dependencies.some((depId) => failedNodeIds.has(depId));
+
+    if (hasFailedDependency) {
+      newlyFailedQueue.push(node);
+    } else if (isReady) {
+      readyQueue.push(node);
+    }
+  }
+
+  // Handle cascading failures immediately
+  for (const node of newlyFailedQueue) {
+    await prisma.runNode.create({
+      data: {
+        runId,
+        nodeId: node.id,
+        status: "failed",
+        inputs: { skipped: true, reason: "Dependency failed" },
+        error: "Dependency failed",
+        startedAt: new Date(),
+        finishedAt: new Date(),
+        durationMs: 0,
+      },
+    });
+    // Recursive check in case this newly failed node cascades to more failures
+    return proceedWithRun(runId, executionNodes, executionEdges);
+  }
+
+  if (isDone) {
+    const hasFailure = failedNodeIds.size > 0;
+    const run = await prisma.run.findUnique({ where: { id: runId } });
+    if (run) {
+      await prisma.run.update({
+        where: { id: runId },
+        data: {
+          status: hasFailure ? "partial" : "success",
+          finishedAt: new Date(),
+          durationMs: Date.now() - run.startedAt.getTime(),
+        },
+      });
+    }
+    return;
+  }
+
+  // Trigger ready nodes
+  await Promise.all(
+    readyQueue.map(async (node) => {
+      const dependencyIds = incoming.get(node.id) ?? [];
+      const nodeStarted = Date.now();
+
+      await prisma.runNode.create({
+        data: {
+          runId,
+          nodeId: node.id,
+          status: "running",
+          inputs: {
+            dependencies: dependencyIds.map((dependencyId) => ({ nodeId: dependencyId, output: safeJson(outputMap.get(dependencyId)) })),
+            data: safeJson(node.data),
+          },
+        },
+      });
+
+      try {
+        const output = await executeNodeThroughTrigger({
+          runId,
+          node,
+          dependencyIds,
+          outputMap,
+          incomingEdges: executionEdgeMap.get(node.id) ?? [],
+        });
+
+        // If node was external trigger task, output is just {}, we wait for webhook.
+        // If node was pure local execution (text, uploadImage URL resolution), it returns actual object.
+        if (Object.keys(output).length > 0) {
+          await prisma.runNode.updateMany({
+            where: { runId, nodeId: node.id },
+            data: {
+              status: "success",
+              outputs: { output: safeJson(output) },
+              finishedAt: new Date(),
+              durationMs: Date.now() - nodeStarted,
+            },
+          });
+          // Proceed DAG check recursively since a local node finished immediately
+          await proceedWithRun(runId, executionNodes, executionEdges);
+        }
+      } catch (error) {
+        await prisma.runNode.updateMany({
+          where: { runId, nodeId: node.id },
+          data: {
+            status: "failed",
+            error: error instanceof Error ? error.message : "Unknown error",
+            finishedAt: new Date(),
+            durationMs: Date.now() - nodeStarted,
+          },
+        });
+        // Proceed DAG check recursively to fail dependent nodes
+        await proceedWithRun(runId, executionNodes, executionEdges);
+      }
+    }),
+  );
 }
 
 async function executeNodeThroughTrigger(params: {

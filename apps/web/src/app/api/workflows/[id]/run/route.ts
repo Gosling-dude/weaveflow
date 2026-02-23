@@ -27,15 +27,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         userId: dbUser.id,
         type: parsed.data.scope,
         status: "running",
+        meta: {
+          nodeIds: parsed.data.nodeIds,
+          nodes: parsed.data.nodes,
+          edges: parsed.data.edges,
+        },
       },
     });
 
     void executeRun({
       runId: run.id,
-      scope: parsed.data.scope,
-      nodeIds: parsed.data.nodeIds,
-      nodes: parsed.data.nodes,
-      edges: parsed.data.edges,
     });
 
     return NextResponse.json({ runId: run.id });

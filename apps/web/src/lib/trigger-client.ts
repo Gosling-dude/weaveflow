@@ -14,10 +14,9 @@ function ensureConfigured() {
 
 export async function triggerAndWait<TPayload extends object, TOutput = unknown>(taskId: string, payload: TPayload): Promise<TOutput> {
   ensureConfigured();
-  const result = await tasks.triggerAndWait(taskId, payload as never);
-  if (!result.ok) {
-    const message = result.error instanceof Error ? result.error.message : "Trigger task failed";
-    throw new Error(message);
-  }
-  return result.output as TOutput;
+  const result = await tasks.trigger(taskId, payload as never);
+
+  // Since we're using webhooks for outputs via the Next.js API, we don't return the output here.
+  // We just return a dummy object because the actual output will be saved to the database via the webhook.
+  return {} as TOutput;
 }

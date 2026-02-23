@@ -24,6 +24,8 @@ export async function POST(request: Request) {
         status: "running",
         meta: {
           nodeIds: parsed.data.nodeIds ?? [],
+          nodes: parsed.data.nodes,
+          edges: parsed.data.edges,
         },
       },
     });
@@ -31,10 +33,6 @@ export async function POST(request: Request) {
     after(async () => {
       await executeRun({
         runId: run.id,
-        scope: parsed.data.scope,
-        nodeIds: parsed.data.nodeIds,
-        nodes: parsed.data.nodes,
-        edges: parsed.data.edges,
       });
     });
 
