@@ -4,9 +4,9 @@ let configured = false;
 
 function ensureConfigured() {
   if (configured) return;
-  const accessToken = process.env.TRIGGER_API_KEY;
+  const accessToken = process.env.TRIGGER_SECRET_KEY || process.env.TRIGGER_API_KEY;
   if (!accessToken) {
-    throw new Error("TRIGGER_API_KEY is missing");
+    throw new Error("TRIGGER_SECRET_KEY or TRIGGER_API_KEY is missing");
   }
   configure({ accessToken });
   configured = true;
