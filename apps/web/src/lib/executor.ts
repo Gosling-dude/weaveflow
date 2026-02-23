@@ -292,7 +292,14 @@ function asPercent(value: unknown, fallback: number) {
 }
 
 function buildCallbackUrl() {
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? process.env.APP_URL;
+  let appUrl = process.env.NEXT_PUBLIC_APP_URL ?? process.env.APP_URL;
+
+  if (!appUrl && process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    appUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  } else if (!appUrl && process.env.VERCEL_URL) {
+    appUrl = `https://${process.env.VERCEL_URL}`;
+  }
+
   if (!appUrl) return undefined;
   return `${appUrl.replace(/\/$/, "")}/api/trigger/callback`;
 }

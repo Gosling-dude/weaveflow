@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
+import { after } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireDbUser } from "@/lib/server-auth";
 import { runRequestSchema } from "@/lib/schemas";
 import { executeRun } from "@/lib/executor";
+
+export const maxDuration = 60;
 
 export async function POST(request: Request) {
   try {
@@ -25,12 +28,14 @@ export async function POST(request: Request) {
       },
     });
 
-    void executeRun({
-      runId: run.id,
-      scope: parsed.data.scope,
-      nodeIds: parsed.data.nodeIds,
-      nodes: parsed.data.nodes,
-      edges: parsed.data.edges,
+    after(async () => {
+      await executeRun({
+        runId: run.id,
+        scope: parsed.data.scope,
+        nodeIds: parsed.data.nodeIds,
+        nodes: parsed.data.nodes,
+        edges: parsed.data.edges,
+      });
     });
 
     return NextResponse.json({ runId: run.id });

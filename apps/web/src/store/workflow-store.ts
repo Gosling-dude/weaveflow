@@ -173,6 +173,7 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
   },
   loadSampleWorkflow: () => {
     const n1 = createNode("uploadImage", 80, 80);
+    n1.data.imageUrl = "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop";
     const n2 = createNode("cropImage", 360, 80);
     const n3 = createNode("text", 80, 320);
     n3.data.textValue = "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.";
@@ -180,6 +181,7 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
     n4.data.textValue = "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.";
     const n5 = createNode("llm", 640, 200);
     const n6 = createNode("uploadVideo", 80, 650);
+    n6.data.videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
     const n7 = createNode("extractFrame", 360, 650);
     const n8 = createNode("text", 640, 560);
     n8.data.textValue =
