@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { after } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireDbUser } from "@/lib/server-auth";
 import { runRequestSchema } from "@/lib/schemas";
@@ -29,13 +30,17 @@ export async function POST(request: Request) {
       },
     });
 
-    await executeRun({
-      runId: run.id,
+    after(async () => {
+      try {
+        await executeRun({ runId: run.id });
+      } catch (e) {
+        console.error("Background execution failed:", e);
+      }
     });
 
     return NextResponse.json({ runId: run.id });
-  } catch (err) {
+  } catch (err: any) {
     console.error("Run workflow error:", err);
-    return NextResponse.json({ error: "Unauthorized or Internal Error" }, { status: 500 });
+    return NextResponse.json({ error: err?.message || String(err) || "Unknown Internal Error" }, { status: 500 });
   }
 }
