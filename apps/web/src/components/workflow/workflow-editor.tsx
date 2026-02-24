@@ -129,12 +129,29 @@ function EditorContent() {
   }, [updateNodeData]);
 
   const runWorkflow = async (scope: "full" | "single" | "partial") => {
-    const selectedIds = reactFlow.getNodes().filter((node) => node.selected).map((node) => node.id);
-    await fetch("/api/workflows/run", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ scope, nodeIds: scope === "full" ? undefined : selectedIds, workflowId, nodes, edges }),
-    });
+    try {
+      const selectedIds = reactFlow.getNodes().filter((node) => node.selected).map((node) => node.id);
+      const response = await fetch("/api/workflows/run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          scope,
+          nodeIds: scope === "full" ? undefined : selectedIds,
+          workflowId: workflowId ?? undefined,
+          nodes,
+          edges,
+        }),
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        console.error("Workflow run failed:", err);
+        alert(`Failed to start run: ${err.error ? JSON.stringify(err.error) : "Unknown error"}`);
+      }
+    } catch (e) {
+      console.error(e);
+      alert("Failed to start workflow run");
+    }
   };
 
   const exportJson = () => {
