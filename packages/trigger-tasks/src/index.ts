@@ -33,7 +33,7 @@ async function postCallback(callbackUrl: string | undefined, payload: Record<str
 function makeTransloaditSignature(paramsStr: string) {
   const secret = process.env.TRANSLOADIT_SECRET;
   if (!secret) throw new Error("TRANSLOADIT_SECRET missing");
-  return `sha384:${createHash("sha384").update(paramsStr + secret).digest("hex")}`;
+  return `sha384:${createHmac("sha384", secret).update(Buffer.from(paramsStr, "utf-8")).digest("hex")}`;
 }
 
 async function uploadBinaryToTransloadit(data: Uint8Array, fileName: string, mimeType: string) {
