@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "trigger dev",
-    "deploy": "trigger deploy"
+    "deploy": "trigger deploy --env-file .env"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
