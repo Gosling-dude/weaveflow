@@ -46,7 +46,7 @@ async function uploadBinaryToTransloadit(data: Uint8Array, fileName: string, mim
       expires: new Date(Date.now() + 10 * 60_000).toISOString(),
     },
     steps: {
-      upload: {
+      ":original": {
         robot: "/upload/handle",
       },
     },
