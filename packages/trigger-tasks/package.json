@@ -13,6 +13,6 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@trigger.dev/cli": "4.4.1"
+    "@trigger.dev/cli": "^3.3.12"
   }
 }
