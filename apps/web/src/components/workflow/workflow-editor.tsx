@@ -175,48 +175,63 @@ function EditorContent() {
   };
 
   const topBar = (
-    <div className="panel absolute top-3 left-3 z-50 rounded-xl p-2 flex items-center gap-2 flex-wrap max-w-full">
-      <input className="input w-72" value={title} onChange={(event) => setTitle(event.target.value)} />
-      <button className="button" onClick={() => void saveWorkflow()}>
-        Save
-      </button>
-      <button className="button" onClick={() => runWorkflow("full")}>
-        Run Workflow
-      </button>
-      <button className="button" onClick={() => runWorkflow("partial")}>
-        Run Selected
-      </button>
-      <button className="button" onClick={undo}>
-        Undo
-      </button>
-      <button className="button" onClick={redo}>
-        Redo
-      </button>
-      <button className="button" onClick={loadSampleWorkflow}>
-        Load Sample
-      </button>
-      <button className="button" onClick={exportJson}>
-        Export JSON
-      </button>
-      <label className="button cursor-pointer">
-        Import JSON
+    <div className="absolute top-0 left-0 right-0 h-[56px] z-50 flex items-center justify-between px-4 bg-[#09090B] border-b border-[#18181B]">
+      <div className="flex items-center gap-4">
         <input
-          className="hidden"
-          type="file"
-          accept="application/json"
-          onChange={(event) => {
-            const file = event.target.files?.[0];
-            if (file) importJson(file);
-          }}
+          className="bg-[#18181B] border border-[#27272A] rounded-lg px-3 py-1.5 text-sm text-white font-medium focus:outline-none focus:border-[#A855F7] transition-colors w-64 placeholder:text-[#71717A]"
+          placeholder="Untitled Project"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
         />
-      </label>
+        <div className="flex items-center gap-2">
+          <button className="text-xs font-semibold text-[#A1A1AA] hover:text-white transition-colors px-2 py-1 cursor-pointer" onClick={() => void saveWorkflow()}>
+            Save
+          </button>
+          <button className="text-xs font-semibold text-[#A1A1AA] hover:text-white transition-colors px-2 py-1 cursor-pointer" onClick={undo}>
+            Undo
+          </button>
+          <button className="text-xs font-semibold text-[#A1A1AA] hover:text-white transition-colors px-2 py-1 cursor-pointer" onClick={redo}>
+            Redo
+          </button>
+        </div>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <button className="text-xs font-semibold text-[#A1A1AA] hover:text-white transition-colors px-2 py-1 cursor-pointer" onClick={loadSampleWorkflow}>
+          Load Sample
+        </button>
+        <button className="text-xs font-semibold text-[#A1A1AA] hover:text-white transition-colors px-2 py-1 cursor-pointer" onClick={exportJson}>
+          Export
+        </button>
+        <label className="text-xs font-semibold text-[#A1A1AA] hover:text-white transition-colors px-2 py-1 cursor-pointer">
+          Import
+          <input
+            className="hidden"
+            type="file"
+            accept="application/json"
+            onChange={(event) => {
+              const file = event.target.files?.[0];
+              if (file) importJson(file);
+            }}
+          />
+        </label>
+
+        <div className="w-[1px] h-4 bg-[#27272A] mx-1" />
+
+        <button className="button py-1.5 px-3 bg-[#18181B] border-[#27272A] hover:bg-[#27272A]" onClick={() => runWorkflow("partial")}>
+          Run Selected
+        </button>
+        <button className="button py-1.5 px-3 bg-[#A855F7] border-[#9333EA] text-white hover:bg-[#9333EA]" onClick={() => runWorkflow("full")}>
+          Run Workflow
+        </button>
+      </div>
     </div>
   );
 
   return (
     <div className="h-screen w-screen flex overflow-hidden">
       <LeftSidebar />
-      <div className="flex-1 relative">
+      <div className="flex-1 relative bg-[#000000]">
         {topBar}
         <ReactFlow
           fitView
@@ -227,11 +242,17 @@ function EditorContent() {
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
           onSelectionChange={(selection) => setSelectedNodeIds((selection.nodes ?? []).map((node) => node.id))}
-          defaultEdgeOptions={{ animated: true, style: { stroke: "#8b5cf6", strokeWidth: 2 }, type: "smoothstep" }}
+          defaultEdgeOptions={{ animated: false, style: { stroke: "#3F3F46", strokeWidth: 2 }, type: "smoothstep" }}
         >
-          <Background variant={BackgroundVariant.Dots} gap={24} size={1} color="#25314f" />
-          <MiniMap position="bottom-right" pannable zoomable className="!bg-[#0d1320] !border !border-[#1f2b45]" />
-          <Controls />
+          <Background variant={BackgroundVariant.Dots} gap={20} size={1} color="#1F1F1F" />
+          <MiniMap
+            position="bottom-right"
+            pannable
+            zoomable
+            className="!bg-[#09090B] !border !border-[#27272A] !rounded-lg overflow-hidden shadow-lg mb-4 mr-4"
+            maskColor="rgba(0, 0, 0, 0.7)"
+            nodeColor={(n) => n.data.running ? "#22C55E" : "#18181B"}
+          />
         </ReactFlow>
       </div>
       <HistorySidebar />
