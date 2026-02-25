@@ -33,7 +33,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ nod
       },
     });
 
-    void executeRun({
+    await executeRun({
       runId: run.id,
     });
 

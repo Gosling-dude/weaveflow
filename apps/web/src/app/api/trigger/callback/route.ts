@@ -68,7 +68,7 @@ export async function POST(request: Request) {
   // Trigger next step of the pipeline if the node actually finished
   if (payload.status !== "running") {
     const { resumeRun } = await import("@/lib/executor");
-    void resumeRun(payload.runId);
+    await resumeRun(payload.runId);
   }
 
   return NextResponse.json({ ok: true });

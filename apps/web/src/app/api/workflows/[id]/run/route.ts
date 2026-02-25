@@ -35,7 +35,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       },
     });
 
-    void executeRun({
+    await executeRun({
       runId: run.id,
     });
 
