@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@trigger.dev/sdk": "4.4.1",
+    "@trigger.dev/sdk": "4.3.3",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@trigger.dev/cli": "^3.3.12"
+    "trigger.dev": "4.3.3"
   }
 }

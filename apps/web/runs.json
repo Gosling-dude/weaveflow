@@ -1,1715 +1,82 @@
 [
   {
-    "id": "45e31769-295b-4bda-9700-42b34930503f",
-    "workflowId": "4c96bbd4-8d31-4e6b-8ac6-a83debfc5c8c",
-    "userId": "ea2fd71e-2938-4516-92d6-0d1169a3f77d",
+    "id": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+    "workflowId": "b901783f-d56c-4f9b-9c05-00b669ea8cfd",
+    "userId": "05d7ba61-c9e7-4984-b5b3-d9df5aa0cd9d",
     "type": "full",
     "status": "running",
-    "startedAt": "2026-02-25T11:05:16.193Z",
+    "startedAt": "2026-02-25T17:04:38.642Z",
     "finishedAt": null,
     "durationMs": null,
     "meta": {
       "edges": [
         {
-          "id": "ja8JVOp5nq3KsXaJ7QAsZ",
-          "source": "BVKlCqRTUUKXXif5c2LJK",
-          "target": "4zBoVuYThlCD0Ngrz4pur",
+          "id": "nd2WQza02FR0lvqSbXy7R",
+          "source": "ctZrSdCtF1O2BCAYv0K_Q",
+          "target": "rNZEJgCJRTExn-PovcV1s",
           "sourceHandle": "output_image",
           "targetHandle": "image_url"
         },
         {
-          "id": "NJVIOXepuHyCCwvjdQMVB",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "HpC192-nD-p4vz1elJF79",
+          "id": "aoGzcVbCf6avIHOpHPUnJ",
+          "source": "rNZEJgCJRTExn-PovcV1s",
+          "target": "9dzgMJRhzEB5VsjsB7Nd4",
           "sourceHandle": "output_image",
           "targetHandle": "images"
         },
         {
-          "id": "eR1bi75k5i2i9c8IvxJuX",
-          "source": "SyvzsjCbgV4fYHyTSrWmw",
-          "target": "HpC192-nD-p4vz1elJF79",
+          "id": "-SJ-h4DSP-puEp-5XnSWi",
+          "source": "nngxKQK5QWEYXqTCWFN8f",
+          "target": "9dzgMJRhzEB5VsjsB7Nd4",
           "sourceHandle": "output",
           "targetHandle": "system_prompt"
         },
         {
-          "id": "XK3f69LEiGFaEvFgAIO9n",
-          "source": "Jc9L9vDOii-GGndzyU5T8",
-          "target": "HpC192-nD-p4vz1elJF79",
+          "id": "_lBpd8lxcBQXRyhyZMXLs",
+          "source": "ZotHQw9X2_g67Rfk7Yyx1",
+          "target": "9dzgMJRhzEB5VsjsB7Nd4",
           "sourceHandle": "output",
           "targetHandle": "user_message"
         },
         {
-          "id": "t5OjYkYGrHT8u0e6MQ32J",
-          "source": "XOEIQhJteinm4qbZnatWz",
-          "target": "CkcO0dd-CT1Vc1fm3mD9D",
+          "id": "DQsoNMBgwJuxITH4WzjRU",
+          "source": "YlPRAGiztivt7cm1nn-tQ",
+          "target": "5NcHfvUnm0wVJz3k7t1R2",
           "sourceHandle": "output_video",
           "targetHandle": "video_url"
         },
         {
-          "id": "XxWDPWNOqXwQ2PVuLIOUr",
-          "source": "HpC192-nD-p4vz1elJF79",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
+          "id": "zBgSTGrwtXMj-VNUV7XI7",
+          "source": "9dzgMJRhzEB5VsjsB7Nd4",
+          "target": "nlf5sMs-wGtcxzrV75imJ",
           "sourceHandle": "output",
           "targetHandle": "user_message"
         },
         {
-          "id": "Rr2LvloTdF-q02UoSi6r1",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
+          "id": "G-Ok5WE-35PGb1GKf-eKx",
+          "source": "rNZEJgCJRTExn-PovcV1s",
+          "target": "nlf5sMs-wGtcxzrV75imJ",
           "sourceHandle": "output_image",
           "targetHandle": "images"
         },
         {
-          "id": "zup7LNtko0uYFXA0mYQxV",
-          "source": "CkcO0dd-CT1Vc1fm3mD9D",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
+          "id": "Ws-H2DsQOjGAMKwwQCnGL",
+          "source": "5NcHfvUnm0wVJz3k7t1R2",
+          "target": "nlf5sMs-wGtcxzrV75imJ",
           "sourceHandle": "output_image",
           "targetHandle": "images"
         },
         {
-          "id": "GzNsSquPf5tNyDTv_vnws",
-          "source": "crmveJ3pcpnJeXuAv92Cg",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
+          "id": "uRtAjv9yETICUZqeG7NC3",
+          "source": "WWkX7x1O-h0SpXEwEH06v",
+          "target": "nlf5sMs-wGtcxzrV75imJ",
           "sourceHandle": "output",
           "targetHandle": "system_prompt"
         }
       ],
       "nodes": [
         {
-          "id": "BVKlCqRTUUKXXif5c2LJK",
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "running": false,
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "type": "uploadImage",
-          "dragging": false,
-          "measured": {
-            "width": 336,
-            "height": 281
-          },
-          "position": {
-            "x": -80,
-            "y": 56
-          },
-          "selected": false
-        },
-        {
-          "id": "4zBoVuYThlCD0Ngrz4pur",
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "type": "cropImage",
-          "dragging": false,
-          "measured": {
-            "width": 385,
-            "height": 216
-          },
-          "position": {
-            "x": 652,
-            "y": -62
-          },
-          "selected": false
-        },
-        {
-          "id": "SyvzsjCbgV4fYHyTSrWmw",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "running": true,
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": -110,
-            "y": 398
-          },
-          "selected": false
-        },
-        {
-          "id": "Jc9L9vDOii-GGndzyU5T8",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "running": true,
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": -96,
-            "y": 624
-          },
-          "selected": false
-        },
-        {
-          "id": "HpC192-nD-p4vz1elJF79",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1314,
-            "y": 878
-          },
-          "selected": false
-        },
-        {
-          "id": "XOEIQhJteinm4qbZnatWz",
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": true,
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "type": "uploadVideo",
-          "dragging": false,
-          "measured": {
-            "width": 1060,
-            "height": 715
-          },
-          "position": {
-            "x": -246,
-            "y": 1043.75
-          },
-          "selected": false
-        },
-        {
-          "id": "CkcO0dd-CT1Vc1fm3mD9D",
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "type": "extractFrame",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 170
-          },
-          "position": {
-            "x": 514,
-            "y": 730
-          },
-          "selected": true
-        },
-        {
-          "id": "crmveJ3pcpnJeXuAv92Cg",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "running": true,
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": 700,
-            "y": 260
-          },
-          "selected": false
-        },
-        {
-          "id": "EGg9PT74FwpqJLE-tdcy9",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1402,
-            "y": 260
-          },
-          "selected": false
-        }
-      ],
-      "nodeIds": []
-    },
-    "nodes": [
-      {
-        "id": "763fcbe2-8759-40fb-9cef-fdce080464ac",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "SyvzsjCbgV4fYHyTSrWmw",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.",
-            "running": false,
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.216Z",
-        "finishedAt": "2026-02-25T11:05:16.219Z",
-        "durationMs": 4
-      },
-      {
-        "id": "0bfa99a4-4a4e-489e-b1b1-23056ea9b978",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "4zBoVuYThlCD0Ngrz4pur",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "dependencies": [
-            {
-              "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-              "output": {
-                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.236Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "b976fc32-ae8e-483c-9654-409ac6b96566",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "crmveJ3pcpnJeXuAv92Cg",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.",
-            "running": false,
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.217Z",
-        "finishedAt": "2026-02-25T11:05:16.220Z",
-        "durationMs": 5
-      },
-      {
-        "id": "f7d2ef28-774b-4a88-ad7a-a2b3f12ce395",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.236Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "ef572bf9-ac7d-49ff-ae8f-2e73762b666f",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "running": false,
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.216Z",
-        "finishedAt": "2026-02-25T11:05:16.218Z",
-        "durationMs": 3
-      },
-      {
-        "id": "48ffbb54-c8ba-42d1-ad9d-2b52984d9133",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "4zBoVuYThlCD0Ngrz4pur",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "dependencies": [
-            {
-              "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-              "output": {
-                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.228Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "5283d847-ddc2-4181-80d5-244b31ef3577",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "Jc9L9vDOii-GGndzyU5T8",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.",
-            "running": false,
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.216Z",
-        "finishedAt": "2026-02-25T11:05:16.219Z",
-        "durationMs": 4
-      },
-      {
-        "id": "e39a3c19-b363-43b7-b6a8-a4e6e27870a4",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "XOEIQhJteinm4qbZnatWz",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.217Z",
-        "finishedAt": "2026-02-25T11:05:16.220Z",
-        "durationMs": 5
-      },
-      {
-        "id": "de3a0212-e27f-4300-97cd-b0208bcb587a",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "4zBoVuYThlCD0Ngrz4pur",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "dependencies": [
-            {
-              "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-              "output": {
-                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.229Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "a78e1c33-2d4c-4c50-90b2-04b386b8b713",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.235Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "b6221435-33bb-4188-bdc6-8d7e0d8d9f49",
-        "runId": "45e31769-295b-4bda-9700-42b34930503f",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:16.237Z",
-        "finishedAt": null,
-        "durationMs": null
-      }
-    ]
-  },
-  {
-    "id": "75e942e2-cdf2-496d-a181-b7015cd77145",
-    "workflowId": "4c96bbd4-8d31-4e6b-8ac6-a83debfc5c8c",
-    "userId": "ea2fd71e-2938-4516-92d6-0d1169a3f77d",
-    "type": "full",
-    "status": "running",
-    "startedAt": "2026-02-25T11:05:15.723Z",
-    "finishedAt": null,
-    "durationMs": null,
-    "meta": {
-      "edges": [
-        {
-          "id": "ja8JVOp5nq3KsXaJ7QAsZ",
-          "source": "BVKlCqRTUUKXXif5c2LJK",
-          "target": "4zBoVuYThlCD0Ngrz4pur",
-          "sourceHandle": "output_image",
-          "targetHandle": "image_url"
-        },
-        {
-          "id": "NJVIOXepuHyCCwvjdQMVB",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "eR1bi75k5i2i9c8IvxJuX",
-          "source": "SyvzsjCbgV4fYHyTSrWmw",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        },
-        {
-          "id": "XK3f69LEiGFaEvFgAIO9n",
-          "source": "Jc9L9vDOii-GGndzyU5T8",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "t5OjYkYGrHT8u0e6MQ32J",
-          "source": "XOEIQhJteinm4qbZnatWz",
-          "target": "CkcO0dd-CT1Vc1fm3mD9D",
-          "sourceHandle": "output_video",
-          "targetHandle": "video_url"
-        },
-        {
-          "id": "XxWDPWNOqXwQ2PVuLIOUr",
-          "source": "HpC192-nD-p4vz1elJF79",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "Rr2LvloTdF-q02UoSi6r1",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "zup7LNtko0uYFXA0mYQxV",
-          "source": "CkcO0dd-CT1Vc1fm3mD9D",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "GzNsSquPf5tNyDTv_vnws",
-          "source": "crmveJ3pcpnJeXuAv92Cg",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        }
-      ],
-      "nodes": [
-        {
-          "id": "BVKlCqRTUUKXXif5c2LJK",
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "running": false,
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "type": "uploadImage",
-          "dragging": false,
-          "measured": {
-            "width": 336,
-            "height": 281
-          },
-          "position": {
-            "x": -80,
-            "y": 56
-          },
-          "selected": false
-        },
-        {
-          "id": "4zBoVuYThlCD0Ngrz4pur",
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "type": "cropImage",
-          "dragging": false,
-          "measured": {
-            "width": 385,
-            "height": 216
-          },
-          "position": {
-            "x": 652,
-            "y": -62
-          },
-          "selected": false
-        },
-        {
-          "id": "SyvzsjCbgV4fYHyTSrWmw",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.",
-            "running": false,
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": -110,
-            "y": 398
-          },
-          "selected": false
-        },
-        {
-          "id": "Jc9L9vDOii-GGndzyU5T8",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.",
-            "running": false,
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": -96,
-            "y": 624
-          },
-          "selected": false
-        },
-        {
-          "id": "HpC192-nD-p4vz1elJF79",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1314,
-            "y": 878
-          },
-          "selected": false
-        },
-        {
-          "id": "XOEIQhJteinm4qbZnatWz",
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "type": "uploadVideo",
-          "dragging": false,
-          "measured": {
-            "width": 1060,
-            "height": 715
-          },
-          "position": {
-            "x": -246,
-            "y": 1043.75
-          },
-          "selected": false
-        },
-        {
-          "id": "CkcO0dd-CT1Vc1fm3mD9D",
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "type": "extractFrame",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 170
-          },
-          "position": {
-            "x": 514,
-            "y": 730
-          },
-          "selected": true
-        },
-        {
-          "id": "crmveJ3pcpnJeXuAv92Cg",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.",
-            "running": false,
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": 700,
-            "y": 260
-          },
-          "selected": false
-        },
-        {
-          "id": "EGg9PT74FwpqJLE-tdcy9",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1402,
-            "y": 260
-          },
-          "selected": false
-        }
-      ],
-      "nodeIds": []
-    },
-    "nodes": [
-      {
-        "id": "a4f7106e-8577-41de-ac37-89508b0f61e8",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "SyvzsjCbgV4fYHyTSrWmw",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.",
-            "running": false,
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.744Z",
-        "finishedAt": "2026-02-25T11:05:15.747Z",
-        "durationMs": 4
-      },
-      {
-        "id": "8fe2b76d-7d6c-4755-8c00-eb764160fe41",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "crmveJ3pcpnJeXuAv92Cg",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.",
-            "running": false,
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.745Z",
-        "finishedAt": "2026-02-25T11:05:15.749Z",
-        "durationMs": 6
-      },
-      {
-        "id": "5bfef600-2dab-46c5-ad0d-72618a267ab4",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "4zBoVuYThlCD0Ngrz4pur",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "dependencies": [
-            {
-              "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-              "output": {
-                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.756Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "46734756-3e27-4927-9090-42a0fc2bbc08",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "4zBoVuYThlCD0Ngrz4pur",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "dependencies": [
-            {
-              "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-              "output": {
-                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.763Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "6da48295-b20e-49fc-994a-54a93bfa7ddb",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "Jc9L9vDOii-GGndzyU5T8",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.",
-            "running": false,
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.744Z",
-        "finishedAt": "2026-02-25T11:05:15.749Z",
-        "durationMs": 6
-      },
-      {
-        "id": "ecc0c8d1-895e-4d78-af40-e715725fa43a",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.765Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "c04fbebb-e229-4982-994e-9b2ef78ac3a7",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "running": false,
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.744Z",
-        "finishedAt": "2026-02-25T11:05:15.746Z",
-        "durationMs": 3
-      },
-      {
-        "id": "304a9539-65e9-444e-990d-be84e571886f",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "XOEIQhJteinm4qbZnatWz",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.745Z",
-        "finishedAt": "2026-02-25T11:05:15.749Z",
-        "durationMs": 6
-      },
-      {
-        "id": "4db3db57-65e3-4f7a-be7c-60a807a0ad86",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.764Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "1636a173-e64b-4dcc-aecc-e94b44d21a4d",
-        "runId": "75e942e2-cdf2-496d-a181-b7015cd77145",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:15.764Z",
-        "finishedAt": null,
-        "durationMs": null
-      }
-    ]
-  },
-  {
-    "id": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-    "workflowId": "4c96bbd4-8d31-4e6b-8ac6-a83debfc5c8c",
-    "userId": "ea2fd71e-2938-4516-92d6-0d1169a3f77d",
-    "type": "full",
-    "status": "running",
-    "startedAt": "2026-02-25T11:05:08.880Z",
-    "finishedAt": null,
-    "durationMs": null,
-    "meta": {
-      "edges": [
-        {
-          "id": "ja8JVOp5nq3KsXaJ7QAsZ",
-          "source": "BVKlCqRTUUKXXif5c2LJK",
-          "target": "4zBoVuYThlCD0Ngrz4pur",
-          "sourceHandle": "output_image",
-          "targetHandle": "image_url"
-        },
-        {
-          "id": "NJVIOXepuHyCCwvjdQMVB",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "eR1bi75k5i2i9c8IvxJuX",
-          "source": "SyvzsjCbgV4fYHyTSrWmw",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        },
-        {
-          "id": "XK3f69LEiGFaEvFgAIO9n",
-          "source": "Jc9L9vDOii-GGndzyU5T8",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "t5OjYkYGrHT8u0e6MQ32J",
-          "source": "XOEIQhJteinm4qbZnatWz",
-          "target": "CkcO0dd-CT1Vc1fm3mD9D",
-          "sourceHandle": "output_video",
-          "targetHandle": "video_url"
-        },
-        {
-          "id": "XxWDPWNOqXwQ2PVuLIOUr",
-          "source": "HpC192-nD-p4vz1elJF79",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "Rr2LvloTdF-q02UoSi6r1",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "zup7LNtko0uYFXA0mYQxV",
-          "source": "CkcO0dd-CT1Vc1fm3mD9D",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "GzNsSquPf5tNyDTv_vnws",
-          "source": "crmveJ3pcpnJeXuAv92Cg",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        }
-      ],
-      "nodes": [
-        {
-          "id": "BVKlCqRTUUKXXif5c2LJK",
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "running": false,
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "type": "uploadImage",
-          "dragging": false,
-          "measured": {
-            "width": 336,
-            "height": 281
-          },
-          "position": {
-            "x": -80,
-            "y": 56
-          },
-          "selected": false
-        },
-        {
-          "id": "4zBoVuYThlCD0Ngrz4pur",
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "type": "cropImage",
-          "dragging": false,
-          "measured": {
-            "width": 385,
-            "height": 216
-          },
-          "position": {
-            "x": 652,
-            "y": -62
-          },
-          "selected": false
-        },
-        {
-          "id": "SyvzsjCbgV4fYHyTSrWmw",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.",
-            "running": false,
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": -110,
-            "y": 398
-          },
-          "selected": false
-        },
-        {
-          "id": "Jc9L9vDOii-GGndzyU5T8",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.",
-            "running": false,
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": -96,
-            "y": 624
-          },
-          "selected": false
-        },
-        {
-          "id": "HpC192-nD-p4vz1elJF79",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1314,
-            "y": 878
-          },
-          "selected": false
-        },
-        {
-          "id": "XOEIQhJteinm4qbZnatWz",
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "type": "uploadVideo",
-          "dragging": false,
-          "measured": {
-            "width": 1060,
-            "height": 715
-          },
-          "position": {
-            "x": -246,
-            "y": 1043.75
-          },
-          "selected": false
-        },
-        {
-          "id": "CkcO0dd-CT1Vc1fm3mD9D",
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "type": "extractFrame",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 170
-          },
-          "position": {
-            "x": 514,
-            "y": 730
-          },
-          "selected": true
-        },
-        {
-          "id": "crmveJ3pcpnJeXuAv92Cg",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.",
-            "running": false,
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": 700,
-            "y": 260
-          },
-          "selected": false
-        },
-        {
-          "id": "EGg9PT74FwpqJLE-tdcy9",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1402,
-            "y": 260
-          },
-          "selected": false
-        }
-      ],
-      "nodeIds": []
-    },
-    "nodes": [
-      {
-        "id": "75a5850d-8e71-4bc5-a823-584482270623",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "running": false,
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.924Z",
-        "finishedAt": "2026-02-25T11:05:08.932Z",
-        "durationMs": 10
-      },
-      {
-        "id": "73ae800f-1527-4932-921d-20414e0ee905",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "SyvzsjCbgV4fYHyTSrWmw",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.",
-            "running": false,
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.924Z",
-        "finishedAt": "2026-02-25T11:05:08.955Z",
-        "durationMs": 32
-      },
-      {
-        "id": "d2c896cb-a9a8-49f9-a066-46566e8fc99c",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "XOEIQhJteinm4qbZnatWz",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.924Z",
-        "finishedAt": "2026-02-25T11:05:08.966Z",
-        "durationMs": 43
-      },
-      {
-        "id": "f2b286aa-ea7d-44f9-b0d2-4f9620ae5f3b",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "crmveJ3pcpnJeXuAv92Cg",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.",
-            "running": false,
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.924Z",
-        "finishedAt": "2026-02-25T11:05:09.030Z",
-        "durationMs": 107
-      },
-      {
-        "id": "868156a0-2f33-41b3-aea8-4361ea7a76bd",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "Jc9L9vDOii-GGndzyU5T8",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.",
-            "running": false,
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.925Z",
-        "finishedAt": "2026-02-25T11:05:09.004Z",
-        "durationMs": 38
-      },
-      {
-        "id": "25273283-3ff7-4ac7-be56-7bceda329913",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:09.007Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "d66fddf0-2c29-428b-838c-2fd46b987aa4",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "running": true,
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:09.008Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "20f4c0e6-fdbf-4574-8e05-c2e2947950aa",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "crmveJ3pcpnJeXuAv92Cg",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.",
-            "running": false,
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.968Z",
-        "finishedAt": "2026-02-25T11:05:09.030Z",
-        "durationMs": 107
-      },
-      {
-        "id": "3b3c34c6-af5d-4db8-a909-07d9d3b80cb2",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "4zBoVuYThlCD0Ngrz4pur",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image",
-            "running": true
-          },
-          "dependencies": [
-            {
-              "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-              "output": {
-                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.968Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "a8a57b74-0052-4810-b36a-7e1e828cbdb4",
-        "runId": "cd1c347a-7ac2-4fab-b66e-b5d48e7eef91",
-        "nodeId": "Jc9L9vDOii-GGndzyU5T8",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "result": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.",
-            "running": false,
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T11:05:08.968Z",
-        "finishedAt": "2026-02-25T11:05:09.004Z",
-        "durationMs": 38
-      }
-    ]
-  },
-  {
-    "id": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-    "workflowId": "4c96bbd4-8d31-4e6b-8ac6-a83debfc5c8c",
-    "userId": "ea2fd71e-2938-4516-92d6-0d1169a3f77d",
-    "type": "full",
-    "status": "running",
-    "startedAt": "2026-02-25T10:43:22.784Z",
-    "finishedAt": null,
-    "durationMs": null,
-    "meta": {
-      "edges": [
-        {
-          "id": "ja8JVOp5nq3KsXaJ7QAsZ",
-          "source": "BVKlCqRTUUKXXif5c2LJK",
-          "target": "4zBoVuYThlCD0Ngrz4pur",
-          "sourceHandle": "output_image",
-          "targetHandle": "image_url"
-        },
-        {
-          "id": "NJVIOXepuHyCCwvjdQMVB",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "eR1bi75k5i2i9c8IvxJuX",
-          "source": "SyvzsjCbgV4fYHyTSrWmw",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        },
-        {
-          "id": "XK3f69LEiGFaEvFgAIO9n",
-          "source": "Jc9L9vDOii-GGndzyU5T8",
-          "target": "HpC192-nD-p4vz1elJF79",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "t5OjYkYGrHT8u0e6MQ32J",
-          "source": "XOEIQhJteinm4qbZnatWz",
-          "target": "CkcO0dd-CT1Vc1fm3mD9D",
-          "sourceHandle": "output_video",
-          "targetHandle": "video_url"
-        },
-        {
-          "id": "XxWDPWNOqXwQ2PVuLIOUr",
-          "source": "HpC192-nD-p4vz1elJF79",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "Rr2LvloTdF-q02UoSi6r1",
-          "source": "4zBoVuYThlCD0Ngrz4pur",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "zup7LNtko0uYFXA0mYQxV",
-          "source": "CkcO0dd-CT1Vc1fm3mD9D",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "GzNsSquPf5tNyDTv_vnws",
-          "source": "crmveJ3pcpnJeXuAv92Cg",
-          "target": "EGg9PT74FwpqJLE-tdcy9",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        }
-      ],
-      "nodes": [
-        {
-          "id": "BVKlCqRTUUKXXif5c2LJK",
+          "id": "ctZrSdCtF1O2BCAYv0K_Q",
           "data": {
             "type": "uploadImage",
             "title": "Upload Image",
@@ -1717,8 +84,8 @@
           },
           "type": "uploadImage",
           "measured": {
-            "width": 336,
-            "height": 281
+            "width": 320,
+            "height": 279
           },
           "position": {
             "x": 80,
@@ -1726,7 +93,7 @@
           }
         },
         {
-          "id": "4zBoVuYThlCD0Ngrz4pur",
+          "id": "rNZEJgCJRTExn-PovcV1s",
           "data": {
             "crop": {
               "xPercent": "0",
@@ -1739,8 +106,8 @@
           },
           "type": "cropImage",
           "measured": {
-            "width": 385,
-            "height": 216
+            "width": 387,
+            "height": 213
           },
           "position": {
             "x": 360,
@@ -1748,7 +115,7 @@
           }
         },
         {
-          "id": "SyvzsjCbgV4fYHyTSrWmw",
+          "id": "nngxKQK5QWEYXqTCWFN8f",
           "data": {
             "type": "text",
             "title": "Text Node",
@@ -1757,7 +124,7 @@
           "type": "text",
           "measured": {
             "width": 320,
-            "height": 189
+            "height": 187
           },
           "position": {
             "x": 80,
@@ -1765,503 +132,7 @@
           }
         },
         {
-          "id": "Jc9L9vDOii-GGndzyU5T8",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "type": "text",
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": 80,
-            "y": 470
-          }
-        },
-        {
-          "id": "HpC192-nD-p4vz1elJF79",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1314,
-            "y": 878
-          },
-          "selected": true
-        },
-        {
-          "id": "XOEIQhJteinm4qbZnatWz",
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "type": "uploadVideo",
-          "dragging": false,
-          "measured": {
-            "width": 1060,
-            "height": 715
-          },
-          "position": {
-            "x": 12,
-            "y": 1199.75
-          },
-          "selected": false
-        },
-        {
-          "id": "CkcO0dd-CT1Vc1fm3mD9D",
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "type": "extractFrame",
-          "measured": {
-            "width": 320,
-            "height": 170
-          },
-          "position": {
-            "x": 360,
-            "y": 650
-          }
-        },
-        {
-          "id": "crmveJ3pcpnJeXuAv92Cg",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "type": "text",
-          "measured": {
-            "width": 320,
-            "height": 189
-          },
-          "position": {
-            "x": 640,
-            "y": 560
-          }
-        },
-        {
-          "id": "EGg9PT74FwpqJLE-tdcy9",
-          "data": {
-            "type": "llm",
-            "model": "gemini-2.0-flash",
-            "title": "Run Any LLM"
-          },
-          "type": "llm",
-          "dragging": false,
-          "measured": {
-            "width": 545,
-            "height": 539
-          },
-          "position": {
-            "x": 1402,
-            "y": 260
-          },
-          "selected": false
-        }
-      ],
-      "nodeIds": []
-    },
-    "nodes": [
-      {
-        "id": "a4cce7c2-9420-425a-bd16-2c0b16559c00",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.822Z",
-        "finishedAt": "2026-02-25T10:43:22.831Z",
-        "durationMs": 10
-      },
-      {
-        "id": "b99b6fe2-56b5-4086-bdf0-793f09bef1ba",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "crmveJ3pcpnJeXuAv92Cg",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.823Z",
-        "finishedAt": "2026-02-25T10:43:22.866Z",
-        "durationMs": 45
-      },
-      {
-        "id": "5b489f02-f91a-42eb-8a6d-b97d427cd34a",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "SyvzsjCbgV4fYHyTSrWmw",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.822Z",
-        "finishedAt": "2026-02-25T10:43:22.867Z",
-        "durationMs": 46
-      },
-      {
-        "id": "5c332c0a-0eba-410d-b57b-119a00c14f19",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "4zBoVuYThlCD0Ngrz4pur",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image"
-          },
-          "dependencies": [
-            {
-              "nodeId": "BVKlCqRTUUKXXif5c2LJK",
-              "output": {
-                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.871Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "02c69dd1-9971-4d9e-9ede-5506f526bf08",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.919Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "6575ba35-6d0c-4426-be60-76013dd9f013",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "XOEIQhJteinm4qbZnatWz",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.823Z",
-        "finishedAt": "2026-02-25T10:43:22.901Z",
-        "durationMs": 30
-      },
-      {
-        "id": "4ef0ed16-0dcb-4438-9c0c-849f53e6903f",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "XOEIQhJteinm4qbZnatWz",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.872Z",
-        "finishedAt": "2026-02-25T10:43:22.901Z",
-        "durationMs": 30
-      },
-      {
-        "id": "58d28ea8-78da-4d94-97e7-08334069e7f1",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "CkcO0dd-CT1Vc1fm3mD9D",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "XOEIQhJteinm4qbZnatWz",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.905Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "3ded2369-2043-4db2-8262-a7e71a007f6d",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "Jc9L9vDOii-GGndzyU5T8",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.871Z",
-        "finishedAt": "2026-02-25T10:43:22.901Z",
-        "durationMs": 30
-      },
-      {
-        "id": "ab86c0bc-e5de-4d36-b9e0-edad6bb8c639",
-        "runId": "0e8650c8-5f6c-4afa-8411-1ef6816d7406",
-        "nodeId": "Jc9L9vDOii-GGndzyU5T8",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T10:43:22.823Z",
-        "finishedAt": "2026-02-25T10:43:22.901Z",
-        "durationMs": 30
-      }
-    ]
-  },
-  {
-    "id": "8761057b-2abb-4b9c-987b-00255de1bb83",
-    "workflowId": "95846152-84c4-4a9c-88e9-a6a89c7cd149",
-    "userId": "3f1a3ccc-dda6-4176-996f-f3efe548138c",
-    "type": "full",
-    "status": "running",
-    "startedAt": "2026-02-25T09:57:54.008Z",
-    "finishedAt": null,
-    "durationMs": null,
-    "meta": {
-      "edges": [
-        {
-          "id": "NNjYswXqVM2bbSe05OhAI",
-          "source": "qgc6PK9Y3iGUZE4zHlRgv",
-          "target": "Iho5Nzgd-uddRRHutqPN0",
-          "sourceHandle": "output_image",
-          "targetHandle": "image_url"
-        },
-        {
-          "id": "6sVLZqd1jFWA61q8iWzi_",
-          "source": "Iho5Nzgd-uddRRHutqPN0",
-          "target": "wAtW2cMOfCc2c8mTFwRBS",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "35fYaiUu5VXXfzyAkPeVQ",
-          "source": "D2pyN_dAJgo8d69AsgsKk",
-          "target": "wAtW2cMOfCc2c8mTFwRBS",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        },
-        {
-          "id": "io6cnE9iyYnCGToNjKzhM",
-          "source": "m4kHXENkD1rMKaHi0dHpz",
-          "target": "wAtW2cMOfCc2c8mTFwRBS",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "pzxDL3d2VAbn6nswIkwx0",
-          "source": "9CrFPw_dtepiv3w51KGPB",
-          "target": "zMBb8BInhyutN5eTOl_x-",
-          "sourceHandle": "output_video",
-          "targetHandle": "video_url"
-        },
-        {
-          "id": "E7ReiWPjqoNU-kHDlSdTx",
-          "source": "wAtW2cMOfCc2c8mTFwRBS",
-          "target": "z3cFIlI1w0okfHV8J3624",
-          "sourceHandle": "output",
-          "targetHandle": "user_message"
-        },
-        {
-          "id": "oM0FBwo3wHSA5fHb0q7hv",
-          "source": "Iho5Nzgd-uddRRHutqPN0",
-          "target": "z3cFIlI1w0okfHV8J3624",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "U9PCzxptNQ2pqTy8wXBGo",
-          "source": "zMBb8BInhyutN5eTOl_x-",
-          "target": "z3cFIlI1w0okfHV8J3624",
-          "sourceHandle": "output_image",
-          "targetHandle": "images"
-        },
-        {
-          "id": "0AFlsgRRk59URTeYcPklK",
-          "source": "OwOAFZr_hPAYlUmXPWZox",
-          "target": "z3cFIlI1w0okfHV8J3624",
-          "sourceHandle": "output",
-          "targetHandle": "system_prompt"
-        }
-      ],
-      "nodes": [
-        {
-          "id": "qgc6PK9Y3iGUZE4zHlRgv",
-          "data": {
-            "type": "uploadImage",
-            "title": "Upload Image",
-            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
-          },
-          "type": "uploadImage",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 279
-          },
-          "position": {
-            "x": 164.9390243902439,
-            "y": 56.21707317073171
-          },
-          "selected": false
-        },
-        {
-          "id": "Iho5Nzgd-uddRRHutqPN0",
-          "data": {
-            "crop": {
-              "xPercent": "0",
-              "yPercent": "0",
-              "widthPercent": "100",
-              "heightPercent": "100"
-            },
-            "type": "cropImage",
-            "title": "Crop Image"
-          },
-          "type": "cropImage",
-          "dragging": false,
-          "measured": {
-            "width": 387,
-            "height": 213
-          },
-          "position": {
-            "x": 577.4439024390243,
-            "y": 120.7707317073171
-          },
-          "selected": false
-        },
-        {
-          "id": "D2pyN_dAJgo8d69AsgsKk",
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
-          },
-          "type": "text",
-          "dragging": false,
-          "measured": {
-            "width": 320,
-            "height": 187
-          },
-          "position": {
-            "x": 249.8780487804878,
-            "y": 342.0841463414634
-          },
-          "selected": false
-        },
-        {
-          "id": "m4kHXENkD1rMKaHi0dHpz",
+          "id": "ZotHQw9X2_g67Rfk7Yyx1",
           "data": {
             "type": "text",
             "title": "Text Node",
@@ -2278,47 +149,41 @@
           }
         },
         {
-          "id": "wAtW2cMOfCc2c8mTFwRBS",
+          "id": "9dzgMJRhzEB5VsjsB7Nd4",
           "data": {
             "type": "llm",
             "model": "gemini-2.0-flash",
             "title": "Run Any LLM"
           },
           "type": "llm",
-          "dragging": false,
           "measured": {
             "width": 493,
             "height": 536
           },
           "position": {
-            "x": 826.8658536585366,
-            "y": 597.5146341463415
-          },
-          "selected": false
+            "x": 640,
+            "y": 200
+          }
         },
         {
-          "id": "9CrFPw_dtepiv3w51KGPB",
+          "id": "YlPRAGiztivt7cm1nn-tQ",
           "data": {
             "type": "uploadVideo",
             "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
             "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
           },
           "type": "uploadVideo",
-          "dragging": false,
           "measured": {
             "width": 900,
             "height": 623
           },
           "position": {
-            "x": 35.83170731707315,
-            "y": 680.5780487804878
-          },
-          "selected": true
+            "x": 80,
+            "y": 650
+          }
         },
         {
-          "id": "zMBb8BInhyutN5eTOl_x-",
+          "id": "5NcHfvUnm0wVJz3k7t1R2",
           "data": {
             "type": "extractFrame",
             "title": "Extract Frame from Video",
@@ -2335,51 +200,168 @@
           }
         },
         {
-          "id": "OwOAFZr_hPAYlUmXPWZox",
+          "id": "WWkX7x1O-h0SpXEwEH06v",
           "data": {
             "type": "text",
             "title": "Text Node",
             "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
           },
           "type": "text",
-          "dragging": false,
           "measured": {
             "width": 320,
             "height": 187
           },
           "position": {
-            "x": 716.4451219512193,
-            "y": 345.9536585365854
-          },
-          "selected": false
+            "x": 640,
+            "y": 560
+          }
         },
         {
-          "id": "z3cFIlI1w0okfHV8J3624",
+          "id": "nlf5sMs-wGtcxzrV75imJ",
           "data": {
             "type": "llm",
             "model": "gemini-2.0-flash",
             "title": "Run Any LLM"
           },
           "type": "llm",
-          "dragging": false,
           "measured": {
             "width": 493,
             "height": 536
           },
           "position": {
-            "x": 1178.757317073171,
-            "y": 184.6402439024391
-          },
-          "selected": false
+            "x": 980,
+            "y": 380
+          }
         }
       ],
       "nodeIds": []
     },
     "nodes": [
       {
-        "id": "c8abaf27-81eb-41a4-af21-d3362c497a7c",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "qgc6PK9Y3iGUZE4zHlRgv",
+        "id": "ccd2951d-70ec-4092-9f30-64d6cbf78f52",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.682Z",
+        "finishedAt": "2026-02-25T17:04:38.756Z",
+        "durationMs": 76
+      },
+      {
+        "id": "8a01e996-52c3-42bb-9608-03fe6dc3fce1",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.724Z",
+        "finishedAt": "2026-02-25T17:04:38.756Z",
+        "durationMs": 76
+      },
+      {
+        "id": "be2c626c-0ba7-43f1-9707-04d941275f8a",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "WWkX7x1O-h0SpXEwEH06v",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.723Z",
+        "finishedAt": "2026-02-25T17:04:38.756Z",
+        "durationMs": 76
+      },
+      {
+        "id": "137b2b85-54ee-4b16-9f2a-6b47a4e86619",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.779Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "e7941514-494c-4f67-9ff6-8aeb44bcf0ba",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.784Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "5ead2400-56a6-4b3c-8517-035bd928f0de",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "ctZrSdCtF1O2BCAYv0K_Q",
         "status": "success",
         "inputs": {
           "data": {
@@ -2395,14 +377,14 @@
           }
         },
         "error": null,
-        "startedAt": "2026-02-25T09:57:54.025Z",
-        "finishedAt": "2026-02-25T09:57:54.028Z",
-        "durationMs": 4
+        "startedAt": "2026-02-25T17:04:38.682Z",
+        "finishedAt": "2026-02-25T17:04:38.687Z",
+        "durationMs": 7
       },
       {
-        "id": "55bc38c9-95d2-4e45-8b91-cf3ddc9f0b96",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "Iho5Nzgd-uddRRHutqPN0",
+        "id": "07de7eb4-c4f7-490c-b5bc-21964b1bb0ff",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "rNZEJgCJRTExn-PovcV1s",
         "status": "running",
         "inputs": {
           "data": {
@@ -2417,7 +399,7 @@
           },
           "dependencies": [
             {
-              "nodeId": "qgc6PK9Y3iGUZE4zHlRgv",
+              "nodeId": "ctZrSdCtF1O2BCAYv0K_Q",
               "output": {
                 "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
               }
@@ -2426,338 +408,14 @@
         },
         "outputs": null,
         "error": null,
-        "startedAt": "2026-02-25T09:57:54.048Z",
+        "startedAt": "2026-02-25T17:04:38.723Z",
         "finishedAt": null,
         "durationMs": null
       },
       {
-        "id": "de830444-d1ab-4632-a9ae-7088e5b87cc6",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "m4kHXENkD1rMKaHi0dHpz",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.048Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
-        "durationMs": 75
-      },
-      {
-        "id": "7a461688-1c6c-4e54-ab20-d2b8abc6e424",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "9CrFPw_dtepiv3w51KGPB",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.026Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
-        "durationMs": 75
-      },
-      {
-        "id": "c623ad03-4fa0-4e2c-9058-0ffde0b50ad1",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.129Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "456f6701-b654-43e3-adc2-1f18a4a04111",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.130Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "d231f90c-21f1-4fe5-b516-e2dbaf3edf6a",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.131Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "86a80c80-e0c5-43cb-8e69-bf79a5f3a05c",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.129Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "b4aade52-b715-4c06-a4e0-ed2799da925c",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.130Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "1d79a93c-12e5-4b8c-9300-1fa7d68333be",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.128Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "6075e0c8-3f71-458d-88ba-f4f0772baa21",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "m4kHXENkD1rMKaHi0dHpz",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.026Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
-        "durationMs": 75
-      },
-      {
-        "id": "81bbf379-023d-4d67-a9f8-0ca7c7a03768",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
-        "status": "running",
-        "inputs": {
-          "data": {
-            "type": "extractFrame",
-            "title": "Extract Frame from Video",
-            "timestamp": "50%"
-          },
-          "dependencies": [
-            {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
-              "output": {
-                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              }
-            }
-          ]
-        },
-        "outputs": null,
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.132Z",
-        "finishedAt": null,
-        "durationMs": null
-      },
-      {
-        "id": "6f1b13d2-9ed3-4581-a0fc-8f16039f5b2b",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "OwOAFZr_hPAYlUmXPWZox",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.026Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
-        "durationMs": 75
-      },
-      {
-        "id": "993c41cb-28ba-4e92-8c88-7c2ce84c18f4",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "OwOAFZr_hPAYlUmXPWZox",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "text",
-            "title": "Text Node",
-            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.048Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
-        "durationMs": 75
-      },
-      {
-        "id": "7c39fccd-d5ae-4960-b355-deaced3885bc",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "9CrFPw_dtepiv3w51KGPB",
-        "status": "success",
-        "inputs": {
-          "data": {
-            "type": "uploadVideo",
-            "title": "Upload Video",
-            "running": false,
-            "imageUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          },
-          "dependencies": []
-        },
-        "outputs": {
-          "output": {
-            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "error": null,
-        "startedAt": "2026-02-25T09:57:54.048Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
-        "durationMs": 75
-      },
-      {
-        "id": "ed951706-b2f0-4fe6-87e1-9bbcc6bffccc",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "D2pyN_dAJgo8d69AsgsKk",
+        "id": "607b5ff5-eec6-4dfb-a3ea-543562ed863e",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "nngxKQK5QWEYXqTCWFN8f",
         "status": "success",
         "inputs": {
           "data": {
@@ -2773,14 +431,83 @@
           }
         },
         "error": null,
-        "startedAt": "2026-02-25T09:57:54.048Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
+        "startedAt": "2026-02-25T17:04:38.723Z",
+        "finishedAt": "2026-02-25T17:04:38.755Z",
         "durationMs": 75
       },
       {
-        "id": "de028236-7a46-4c66-9a94-337714e3267f",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "D2pyN_dAJgo8d69AsgsKk",
+        "id": "b9b793ed-2eea-4809-9718-f85b131a5be9",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "WWkX7x1O-h0SpXEwEH06v",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.683Z",
+        "finishedAt": "2026-02-25T17:04:38.756Z",
+        "durationMs": 76
+      },
+      {
+        "id": "918495ac-bbb1-4b6e-826a-7a5d7480e68f",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "ZotHQw9X2_g67Rfk7Yyx1",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.683Z",
+        "finishedAt": "2026-02-25T17:04:38.756Z",
+        "durationMs": 76
+      },
+      {
+        "id": "7d4cd485-c52a-4f36-8275-ca7ea0f47232",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "ZotHQw9X2_g67Rfk7Yyx1",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.724Z",
+        "finishedAt": "2026-02-25T17:04:38.756Z",
+        "durationMs": 76
+      },
+      {
+        "id": "df592b34-0f67-44c8-a394-8ea5bf93ab5c",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "nngxKQK5QWEYXqTCWFN8f",
         "status": "success",
         "inputs": {
           "data": {
@@ -2796,14 +523,14 @@
           }
         },
         "error": null,
-        "startedAt": "2026-02-25T09:57:54.026Z",
-        "finishedAt": "2026-02-25T09:57:54.099Z",
+        "startedAt": "2026-02-25T17:04:38.682Z",
+        "finishedAt": "2026-02-25T17:04:38.755Z",
         "durationMs": 75
       },
       {
-        "id": "365e81de-10d4-45fd-ace5-9d4d8bd4fb25",
-        "runId": "8761057b-2abb-4b9c-987b-00255de1bb83",
-        "nodeId": "zMBb8BInhyutN5eTOl_x-",
+        "id": "13f1a342-e3e6-440b-ab3b-0644bbefb513",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
         "status": "running",
         "inputs": {
           "data": {
@@ -2813,7 +540,7 @@
           },
           "dependencies": [
             {
-              "nodeId": "9CrFPw_dtepiv3w51KGPB",
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
               "output": {
                 "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
               }
@@ -2822,7 +549,2390 @@
         },
         "outputs": null,
         "error": null,
-        "startedAt": "2026-02-25T09:57:54.128Z",
+        "startedAt": "2026-02-25T17:04:38.777Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "69327739-b06d-4cce-9408-d5cb93aa178e",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.785Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "84b4350b-303e-460f-a840-fa5bbfa0d025",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.785Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "b3f7ccd1-7b47-45e4-8797-8fe1d5f27863",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.785Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "d66ead6d-e060-4c11-86f3-1edb938dcc26",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.791Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "9eaea44b-c596-465c-ba06-a3ac97a6235f",
+        "runId": "b60546e4-cee2-42a1-8cf5-8007813a7af8",
+        "nodeId": "5NcHfvUnm0wVJz3k7t1R2",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "YlPRAGiztivt7cm1nn-tQ",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T17:04:38.799Z",
+        "finishedAt": null,
+        "durationMs": null
+      }
+    ]
+  },
+  {
+    "id": "a2c0e5de-2549-418e-b272-f54501952bd0",
+    "workflowId": null,
+    "userId": "05d7ba61-c9e7-4984-b5b3-d9df5aa0cd9d",
+    "type": "full",
+    "status": "running",
+    "startedAt": "2026-02-25T16:10:47.411Z",
+    "finishedAt": null,
+    "durationMs": null,
+    "meta": {
+      "edges": [
+        {
+          "id": "BSGpU8rIQTy_am0WWlZMb",
+          "source": "jfHklBASdRXCd0l-auXMF",
+          "target": "7axCmjhJzSnIyD3uCxXsP",
+          "sourceHandle": "output_image",
+          "targetHandle": "image_url"
+        },
+        {
+          "id": "VS_DIvqXd8-ETKMQVmNcn",
+          "source": "7axCmjhJzSnIyD3uCxXsP",
+          "target": "WYJRawZvAtH0fWKoxcKdE",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "IOUnHyhUfd-IYXiHoF3kf",
+          "source": "jT_cuuBt1EaC0Qv0K_-6_",
+          "target": "WYJRawZvAtH0fWKoxcKdE",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        },
+        {
+          "id": "7OXM_U04p6Ybf6NRiau2N",
+          "source": "uDPuDcp2bX1OOwmSsLXf8",
+          "target": "WYJRawZvAtH0fWKoxcKdE",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "kyrGALXMq0Ho3I2yKU0GE",
+          "source": "0lC7h6xAB7fwhje9l6K4q",
+          "target": "6p6Qp4LP0Wb-0eB5nUAxl",
+          "sourceHandle": "output_video",
+          "targetHandle": "video_url"
+        },
+        {
+          "id": "6RcT0bAvWx_rSLW4mCpRr",
+          "source": "WYJRawZvAtH0fWKoxcKdE",
+          "target": "5Zi9HXvmF6fWElY3mSbBA",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "EcQlPXJbyXP4JZ8CTCo5q",
+          "source": "7axCmjhJzSnIyD3uCxXsP",
+          "target": "5Zi9HXvmF6fWElY3mSbBA",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "U-_taD49hNF7LMHV3dm3E",
+          "source": "6p6Qp4LP0Wb-0eB5nUAxl",
+          "target": "5Zi9HXvmF6fWElY3mSbBA",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "EocnUzJmjAge7I_6SWJNx",
+          "source": "y1OaTOzQoSyCAi38Tj1BP",
+          "target": "5Zi9HXvmF6fWElY3mSbBA",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "jfHklBASdRXCd0l-auXMF",
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "type": "uploadImage",
+          "measured": {
+            "width": 320,
+            "height": 279
+          },
+          "position": {
+            "x": 80,
+            "y": 80
+          }
+        },
+        {
+          "id": "7axCmjhJzSnIyD3uCxXsP",
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "type": "cropImage",
+          "measured": {
+            "width": 387,
+            "height": 213
+          },
+          "position": {
+            "x": 360,
+            "y": 80
+          }
+        },
+        {
+          "id": "jT_cuuBt1EaC0Qv0K_-6_",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 320
+          }
+        },
+        {
+          "id": "uDPuDcp2bX1OOwmSsLXf8",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 470
+          }
+        },
+        {
+          "id": "WYJRawZvAtH0fWKoxcKdE",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 640,
+            "y": 200
+          }
+        },
+        {
+          "id": "0lC7h6xAB7fwhje9l6K4q",
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "type": "uploadVideo",
+          "measured": {
+            "width": 900,
+            "height": 623
+          },
+          "position": {
+            "x": 80,
+            "y": 650
+          }
+        },
+        {
+          "id": "6p6Qp4LP0Wb-0eB5nUAxl",
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "type": "extractFrame",
+          "measured": {
+            "width": 320,
+            "height": 168
+          },
+          "position": {
+            "x": 360,
+            "y": 650
+          }
+        },
+        {
+          "id": "y1OaTOzQoSyCAi38Tj1BP",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 640,
+            "y": 560
+          }
+        },
+        {
+          "id": "5Zi9HXvmF6fWElY3mSbBA",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 980,
+            "y": 380
+          }
+        }
+      ],
+      "nodeIds": []
+    },
+    "nodes": [
+      {
+        "id": "4409bfc9-ed65-4564-a8ae-911525eff5e0",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "jT_cuuBt1EaC0Qv0K_-6_",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.450Z",
+        "finishedAt": "2026-02-25T16:10:47.461Z",
+        "durationMs": 12
+      },
+      {
+        "id": "ad803d78-3f64-45b8-86cb-aff0f346fd67",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "y1OaTOzQoSyCAi38Tj1BP",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.451Z",
+        "finishedAt": "2026-02-25T16:10:47.502Z",
+        "durationMs": 53
+      },
+      {
+        "id": "81d50417-98a6-434a-b71b-3351b5c78a18",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "jfHklBASdRXCd0l-auXMF",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.451Z",
+        "finishedAt": "2026-02-25T16:10:47.502Z",
+        "durationMs": 53
+      },
+      {
+        "id": "3cac9091-ee71-4360-8f44-f774df4ef397",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "uDPuDcp2bX1OOwmSsLXf8",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.451Z",
+        "finishedAt": "2026-02-25T16:10:47.503Z",
+        "durationMs": 54
+      },
+      {
+        "id": "b4f2f6ad-59e4-47f0-9064-57b0c07a9370",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "6p6Qp4LP0Wb-0eB5nUAxl",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "0lC7h6xAB7fwhje9l6K4q",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.546Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "e497d27d-e612-42e0-8254-4aa6be71ad8f",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "0lC7h6xAB7fwhje9l6K4q",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.451Z",
+        "finishedAt": "2026-02-25T16:10:47.510Z",
+        "durationMs": 61
+      },
+      {
+        "id": "800d2b7b-1aa9-40a3-9d04-6ac753d7f027",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "7axCmjhJzSnIyD3uCxXsP",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "jfHklBASdRXCd0l-auXMF",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.517Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "dc8ad5c0-6ef8-4afd-915e-e72a2592c75c",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "7axCmjhJzSnIyD3uCxXsP",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "jfHklBASdRXCd0l-auXMF",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.546Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "010472cb-3e96-4fe1-91ba-2cebbe36c833",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "7axCmjhJzSnIyD3uCxXsP",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "jfHklBASdRXCd0l-auXMF",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.514Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "0f1424e7-6021-4a12-b03a-0a2d1fcaacde",
+        "runId": "a2c0e5de-2549-418e-b272-f54501952bd0",
+        "nodeId": "6p6Qp4LP0Wb-0eB5nUAxl",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "0lC7h6xAB7fwhje9l6K4q",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T16:10:47.546Z",
+        "finishedAt": null,
+        "durationMs": null
+      }
+    ]
+  },
+  {
+    "id": "abc543e4-3e13-4411-98ac-2f6df5437931",
+    "workflowId": null,
+    "userId": "05d7ba61-c9e7-4984-b5b3-d9df5aa0cd9d",
+    "type": "full",
+    "status": "running",
+    "startedAt": "2026-02-25T14:19:16.613Z",
+    "finishedAt": null,
+    "durationMs": null,
+    "meta": {
+      "edges": [
+        {
+          "id": "wMw130-62sihGEeZRjMuI",
+          "source": "qShe8oiC524nhN2cA1SuU",
+          "target": "PJTQ5SfYkeG6JXqa4VTb7",
+          "sourceHandle": "output_image",
+          "targetHandle": "image_url"
+        },
+        {
+          "id": "Lj-U7n-5ZADJJw63q3h7j",
+          "source": "PJTQ5SfYkeG6JXqa4VTb7",
+          "target": "cPImGGD0gmLa0dGn5MFxc",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "NQbzUhEhmaSXrL-cFxpK-",
+          "source": "fQ9EuLstC75DQ9Fntc9Zw",
+          "target": "cPImGGD0gmLa0dGn5MFxc",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        },
+        {
+          "id": "xcm8FC5xyDrituc-J4YUL",
+          "source": "I7ngSLL_gQmVXY8_WR0oa",
+          "target": "cPImGGD0gmLa0dGn5MFxc",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "SUmceAG50iM00iJKEJp4E",
+          "source": "13aNW11DITlwYKoabnqtY",
+          "target": "yZhs4KXyba_nlwCjgrr23",
+          "sourceHandle": "output_video",
+          "targetHandle": "video_url"
+        },
+        {
+          "id": "RK-lYVerdvbfYbbZdqlgw",
+          "source": "cPImGGD0gmLa0dGn5MFxc",
+          "target": "fmwFyZzjr3XuPnbLbvORd",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "nBiZI1zh88R8ALdHhg2RF",
+          "source": "PJTQ5SfYkeG6JXqa4VTb7",
+          "target": "fmwFyZzjr3XuPnbLbvORd",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "hAhOBit8ScWEnFDiQPQFn",
+          "source": "yZhs4KXyba_nlwCjgrr23",
+          "target": "fmwFyZzjr3XuPnbLbvORd",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "xUAPhWlra92YjY8VUFZxw",
+          "source": "n8YB0BA1O_p0uNAP74G6v",
+          "target": "fmwFyZzjr3XuPnbLbvORd",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "qShe8oiC524nhN2cA1SuU",
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "type": "uploadImage",
+          "measured": {
+            "width": 320,
+            "height": 279
+          },
+          "position": {
+            "x": 80,
+            "y": 80
+          }
+        },
+        {
+          "id": "PJTQ5SfYkeG6JXqa4VTb7",
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "type": "cropImage",
+          "measured": {
+            "width": 387,
+            "height": 213
+          },
+          "position": {
+            "x": 360,
+            "y": 80
+          }
+        },
+        {
+          "id": "fQ9EuLstC75DQ9Fntc9Zw",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 320
+          }
+        },
+        {
+          "id": "I7ngSLL_gQmVXY8_WR0oa",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 470
+          }
+        },
+        {
+          "id": "cPImGGD0gmLa0dGn5MFxc",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 640,
+            "y": 200
+          }
+        },
+        {
+          "id": "13aNW11DITlwYKoabnqtY",
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "type": "uploadVideo",
+          "measured": {
+            "width": 900,
+            "height": 623
+          },
+          "position": {
+            "x": 80,
+            "y": 650
+          }
+        },
+        {
+          "id": "yZhs4KXyba_nlwCjgrr23",
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "type": "extractFrame",
+          "measured": {
+            "width": 320,
+            "height": 168
+          },
+          "position": {
+            "x": 360,
+            "y": 650
+          }
+        },
+        {
+          "id": "n8YB0BA1O_p0uNAP74G6v",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 640,
+            "y": 560
+          }
+        },
+        {
+          "id": "fmwFyZzjr3XuPnbLbvORd",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 980,
+            "y": 380
+          }
+        }
+      ],
+      "nodeIds": []
+    },
+    "nodes": [
+      {
+        "id": "6ee36647-2027-42cd-b4c3-1460c98e7450",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "PJTQ5SfYkeG6JXqa4VTb7",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "qShe8oiC524nhN2cA1SuU",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.714Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "2e2d5feb-7b09-46b7-b4f8-6a8a275a4260",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "I7ngSLL_gQmVXY8_WR0oa",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.715Z",
+        "finishedAt": "2026-02-25T14:19:16.747Z",
+        "durationMs": 34
+      },
+      {
+        "id": "a5328f0e-dc21-4905-b5cc-12f44037ef03",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "qShe8oiC524nhN2cA1SuU",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.664Z",
+        "finishedAt": "2026-02-25T14:19:16.672Z",
+        "durationMs": 10
+      },
+      {
+        "id": "e9da6662-7aea-4054-85c4-cf5744678fbf",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "13aNW11DITlwYKoabnqtY",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.664Z",
+        "finishedAt": "2026-02-25T14:19:16.711Z",
+        "durationMs": 49
+      },
+      {
+        "id": "1038403c-1022-4a16-882f-d10c86e2ab04",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "fQ9EuLstC75DQ9Fntc9Zw",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.666Z",
+        "finishedAt": "2026-02-25T14:19:16.747Z",
+        "durationMs": 85
+      },
+      {
+        "id": "993b8336-0ea4-45da-9fef-8a9bf921612f",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "I7ngSLL_gQmVXY8_WR0oa",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.665Z",
+        "finishedAt": "2026-02-25T14:19:16.747Z",
+        "durationMs": 34
+      },
+      {
+        "id": "bb3bff64-2978-4225-ad4a-c37e68714592",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "yZhs4KXyba_nlwCjgrr23",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "13aNW11DITlwYKoabnqtY",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.772Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "29a69a8f-6026-453e-be10-e663f8d40714",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "yZhs4KXyba_nlwCjgrr23",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "13aNW11DITlwYKoabnqtY",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.777Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "2dd6ab1f-2f51-4231-9f91-758ac0fd152d",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "n8YB0BA1O_p0uNAP74G6v",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.664Z",
+        "finishedAt": "2026-02-25T14:19:16.707Z",
+        "durationMs": 45
+      },
+      {
+        "id": "5afab305-7451-4e08-be1c-e7e2b65bcc58",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "yZhs4KXyba_nlwCjgrr23",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "13aNW11DITlwYKoabnqtY",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.770Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "54287a9f-35bf-4c0c-8d30-1186c87af7a3",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "fQ9EuLstC75DQ9Fntc9Zw",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.714Z",
+        "finishedAt": "2026-02-25T14:19:16.747Z",
+        "durationMs": 85
+      },
+      {
+        "id": "f561cad8-75de-4432-b5b4-273265cac5f5",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "yZhs4KXyba_nlwCjgrr23",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "13aNW11DITlwYKoabnqtY",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.770Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "07a92f1c-ae8e-4748-a3b6-b5807e9bf4e5",
+        "runId": "abc543e4-3e13-4411-98ac-2f6df5437931",
+        "nodeId": "yZhs4KXyba_nlwCjgrr23",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "13aNW11DITlwYKoabnqtY",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:19:16.776Z",
+        "finishedAt": null,
+        "durationMs": null
+      }
+    ]
+  },
+  {
+    "id": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+    "workflowId": null,
+    "userId": "05d7ba61-c9e7-4984-b5b3-d9df5aa0cd9d",
+    "type": "full",
+    "status": "running",
+    "startedAt": "2026-02-25T14:05:07.847Z",
+    "finishedAt": null,
+    "durationMs": null,
+    "meta": {
+      "edges": [
+        {
+          "id": "SulcisDAQYM6YZW-fly6-",
+          "source": "sr4iVcC3yG8x19uU88IvR",
+          "target": "Ts2LEuc8TS3lNEortWBCH",
+          "sourceHandle": "output_image",
+          "targetHandle": "image_url"
+        },
+        {
+          "id": "BuOzmX8gZMaZFVc9HfW3V",
+          "source": "Ts2LEuc8TS3lNEortWBCH",
+          "target": "BLWyzMoos7av7pP0K6JWn",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "SJ2caZ9W0yEYSJLsRbSr4",
+          "source": "eeMZSSJI6KyuiF12uCUcb",
+          "target": "BLWyzMoos7av7pP0K6JWn",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        },
+        {
+          "id": "pCeEnAt_SPbWPbDOzDIwH",
+          "source": "EujXHo8p2yL_WNhOJHO6o",
+          "target": "BLWyzMoos7av7pP0K6JWn",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "oc1Ds5158srx_pues_WBW",
+          "source": "D80H_vzIrms6Yc0t-7cZ0",
+          "target": "dZM6DByttNrPy0OsJuwZ9",
+          "sourceHandle": "output_video",
+          "targetHandle": "video_url"
+        },
+        {
+          "id": "h_oAWOoxiWoKg4GIna2CT",
+          "source": "BLWyzMoos7av7pP0K6JWn",
+          "target": "J9Um7hN2T_rMIBWZ7KfF_",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "7TPlSYvva5SLFEov4o8-R",
+          "source": "Ts2LEuc8TS3lNEortWBCH",
+          "target": "J9Um7hN2T_rMIBWZ7KfF_",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "P6zX1r7MfGGd4wTWnyIGf",
+          "source": "dZM6DByttNrPy0OsJuwZ9",
+          "target": "J9Um7hN2T_rMIBWZ7KfF_",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "z1Kp9MpOTM9N2HwBBpe2M",
+          "source": "9AYRM4v_66oXDe8GDHsuE",
+          "target": "J9Um7hN2T_rMIBWZ7KfF_",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "sr4iVcC3yG8x19uU88IvR",
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "type": "uploadImage",
+          "measured": {
+            "width": 320,
+            "height": 279
+          },
+          "position": {
+            "x": 80,
+            "y": 80
+          }
+        },
+        {
+          "id": "Ts2LEuc8TS3lNEortWBCH",
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "type": "cropImage",
+          "measured": {
+            "width": 387,
+            "height": 213
+          },
+          "position": {
+            "x": 360,
+            "y": 80
+          }
+        },
+        {
+          "id": "eeMZSSJI6KyuiF12uCUcb",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 320
+          }
+        },
+        {
+          "id": "EujXHo8p2yL_WNhOJHO6o",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 470
+          }
+        },
+        {
+          "id": "BLWyzMoos7av7pP0K6JWn",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 640,
+            "y": 200
+          }
+        },
+        {
+          "id": "D80H_vzIrms6Yc0t-7cZ0",
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "type": "uploadVideo",
+          "measured": {
+            "width": 900,
+            "height": 623
+          },
+          "position": {
+            "x": 80,
+            "y": 650
+          }
+        },
+        {
+          "id": "dZM6DByttNrPy0OsJuwZ9",
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "type": "extractFrame",
+          "measured": {
+            "width": 320,
+            "height": 168
+          },
+          "position": {
+            "x": 360,
+            "y": 650
+          }
+        },
+        {
+          "id": "9AYRM4v_66oXDe8GDHsuE",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 640,
+            "y": 560
+          }
+        },
+        {
+          "id": "J9Um7hN2T_rMIBWZ7KfF_",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 980,
+            "y": 380
+          }
+        }
+      ],
+      "nodeIds": []
+    },
+    "nodes": [
+      {
+        "id": "1b249175-2298-48b1-b135-69f07767157a",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "sr4iVcC3yG8x19uU88IvR",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.868Z",
+        "finishedAt": "2026-02-25T14:05:07.871Z",
+        "durationMs": 4
+      },
+      {
+        "id": "60bf5610-3c40-430a-a84f-34da12563672",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "D80H_vzIrms6Yc0t-7cZ0",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.868Z",
+        "finishedAt": "2026-02-25T14:05:07.872Z",
+        "durationMs": 5
+      },
+      {
+        "id": "876b7dc8-4a51-47ae-b7f6-049ca01c0d01",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "dZM6DByttNrPy0OsJuwZ9",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "D80H_vzIrms6Yc0t-7cZ0",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.887Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "f8e5e4c9-5fc8-4f1a-9048-408c15ff2744",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "Ts2LEuc8TS3lNEortWBCH",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "sr4iVcC3yG8x19uU88IvR",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.887Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "4e8a1ce5-17fa-4cfb-b233-4134034456b3",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "dZM6DByttNrPy0OsJuwZ9",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "D80H_vzIrms6Yc0t-7cZ0",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.887Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "65b2b8c2-1ca7-4961-b219-e1de68ecf0fc",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "EujXHo8p2yL_WNhOJHO6o",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.868Z",
+        "finishedAt": "2026-02-25T14:05:07.873Z",
+        "durationMs": 6
+      },
+      {
+        "id": "b883a0d0-b814-46b2-a6f0-9d24fc29ad26",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "9AYRM4v_66oXDe8GDHsuE",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.868Z",
+        "finishedAt": "2026-02-25T14:05:07.874Z",
+        "durationMs": 7
+      },
+      {
+        "id": "559275dc-bd80-410a-afbf-27e9079e1a1a",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "eeMZSSJI6KyuiF12uCUcb",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.868Z",
+        "finishedAt": "2026-02-25T14:05:07.873Z",
+        "durationMs": 6
+      },
+      {
+        "id": "83872912-476f-4d03-b927-63cabba3eaea",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "Ts2LEuc8TS3lNEortWBCH",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "sr4iVcC3yG8x19uU88IvR",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.885Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "cfcd6a9e-fab0-4be4-8594-8b4a76d201ca",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "dZM6DByttNrPy0OsJuwZ9",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "D80H_vzIrms6Yc0t-7cZ0",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.887Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "81f82130-cee4-4ad2-bf73-687ed6d1e3d0",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "dZM6DByttNrPy0OsJuwZ9",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "D80H_vzIrms6Yc0t-7cZ0",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.887Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "c89ebe43-0b48-4d99-b38a-835a7b56e793",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "Ts2LEuc8TS3lNEortWBCH",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "sr4iVcC3yG8x19uU88IvR",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.887Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "d6280450-c4e8-42b5-a68f-56c06b422a2c",
+        "runId": "d98d55ca-c157-48e3-b2ce-2ed6e62a83e5",
+        "nodeId": "Ts2LEuc8TS3lNEortWBCH",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "sr4iVcC3yG8x19uU88IvR",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:05:07.887Z",
+        "finishedAt": null,
+        "durationMs": null
+      }
+    ]
+  },
+  {
+    "id": "ec9f947e-7160-4440-bf52-78eaac93e213",
+    "workflowId": null,
+    "userId": "05d7ba61-c9e7-4984-b5b3-d9df5aa0cd9d",
+    "type": "full",
+    "status": "running",
+    "startedAt": "2026-02-25T14:04:28.514Z",
+    "finishedAt": null,
+    "durationMs": null,
+    "meta": {
+      "edges": [
+        {
+          "id": "D_k5w-CqIhk7UfwUAV_gj",
+          "source": "NFxFdYr6JkuI6h7viPbR5",
+          "target": "f6s4476W1styZs6t7T1aU",
+          "sourceHandle": "output_image",
+          "targetHandle": "image_url"
+        },
+        {
+          "id": "FCqyGDYi7-sMtWyQVEOI8",
+          "source": "f6s4476W1styZs6t7T1aU",
+          "target": "M6eev60IGNtivSNWwTrnV",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "QmbllZoQ2WQ8Zwdrc__qS",
+          "source": "X7_1FJV6zozMK68HRIjPb",
+          "target": "M6eev60IGNtivSNWwTrnV",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        },
+        {
+          "id": "DAw_m9NVlfSOfKCj9KYA9",
+          "source": "GLRqeZNmFbS4TnKujplDm",
+          "target": "M6eev60IGNtivSNWwTrnV",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "Cv7jLKJmSIINh4N89FHgp",
+          "source": "gMoAndIRRUV39tLR2QlWo",
+          "target": "MTyTl_K3Qy5v_bfDXsryA",
+          "sourceHandle": "output_video",
+          "targetHandle": "video_url"
+        },
+        {
+          "id": "hxH7rY3P2AvpH5ikFtvjF",
+          "source": "M6eev60IGNtivSNWwTrnV",
+          "target": "QH6YP3hw2fyjBAyhN8Ye3",
+          "sourceHandle": "output",
+          "targetHandle": "user_message"
+        },
+        {
+          "id": "COpiiKVSNa0PBk6Gri0C6",
+          "source": "f6s4476W1styZs6t7T1aU",
+          "target": "QH6YP3hw2fyjBAyhN8Ye3",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "KB-TMZqzXXW2Jyf7T_TXP",
+          "source": "MTyTl_K3Qy5v_bfDXsryA",
+          "target": "QH6YP3hw2fyjBAyhN8Ye3",
+          "sourceHandle": "output_image",
+          "targetHandle": "images"
+        },
+        {
+          "id": "qs4QsuweovsZnT9f--rdp",
+          "source": "xIb8FSOQGXQfWJ_juOCZt",
+          "target": "QH6YP3hw2fyjBAyhN8Ye3",
+          "sourceHandle": "output",
+          "targetHandle": "system_prompt"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "NFxFdYr6JkuI6h7viPbR5",
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "type": "uploadImage",
+          "measured": {
+            "width": 320,
+            "height": 279
+          },
+          "position": {
+            "x": 80,
+            "y": 80
+          }
+        },
+        {
+          "id": "f6s4476W1styZs6t7T1aU",
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "type": "cropImage",
+          "measured": {
+            "width": 387,
+            "height": 213
+          },
+          "position": {
+            "x": 360,
+            "y": 80
+          }
+        },
+        {
+          "id": "X7_1FJV6zozMK68HRIjPb",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 320
+          }
+        },
+        {
+          "id": "GLRqeZNmFbS4TnKujplDm",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 80,
+            "y": 470
+          }
+        },
+        {
+          "id": "M6eev60IGNtivSNWwTrnV",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 640,
+            "y": 200
+          }
+        },
+        {
+          "id": "gMoAndIRRUV39tLR2QlWo",
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "type": "uploadVideo",
+          "measured": {
+            "width": 900,
+            "height": 623
+          },
+          "position": {
+            "x": 80,
+            "y": 650
+          }
+        },
+        {
+          "id": "MTyTl_K3Qy5v_bfDXsryA",
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "type": "extractFrame",
+          "measured": {
+            "width": 320,
+            "height": 168
+          },
+          "position": {
+            "x": 360,
+            "y": 650
+          }
+        },
+        {
+          "id": "xIb8FSOQGXQfWJ_juOCZt",
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "type": "text",
+          "measured": {
+            "width": 320,
+            "height": 187
+          },
+          "position": {
+            "x": 640,
+            "y": 560
+          }
+        },
+        {
+          "id": "QH6YP3hw2fyjBAyhN8Ye3",
+          "data": {
+            "type": "llm",
+            "model": "gemini-2.0-flash",
+            "title": "Run Any LLM"
+          },
+          "type": "llm",
+          "measured": {
+            "width": 493,
+            "height": 536
+          },
+          "position": {
+            "x": 980,
+            "y": 380
+          }
+        }
+      ],
+      "nodeIds": []
+    },
+    "nodes": [
+      {
+        "id": "720731c2-f7ac-4e78-85aa-2c83ff395250",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "NFxFdYr6JkuI6h7viPbR5",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadImage",
+            "title": "Upload Image",
+            "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.538Z",
+        "finishedAt": "2026-02-25T14:04:28.543Z",
+        "durationMs": 6
+      },
+      {
+        "id": "24fc83e0-b8d6-4d0f-8e49-36f0381bd3f1",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "f6s4476W1styZs6t7T1aU",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "crop": {
+              "xPercent": "0",
+              "yPercent": "0",
+              "widthPercent": "100",
+              "heightPercent": "100"
+            },
+            "type": "cropImage",
+            "title": "Crop Image"
+          },
+          "dependencies": [
+            {
+              "nodeId": "NFxFdYr6JkuI6h7viPbR5",
+              "output": {
+                "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.586Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "a54c2b11-dc08-444c-91e6-46cf3af88d1f",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "xIb8FSOQGXQfWJ_juOCZt",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.538Z",
+        "finishedAt": "2026-02-25T14:04:28.626Z",
+        "durationMs": 53
+      },
+      {
+        "id": "9a52425c-29c1-4cc8-96d7-d6fb8a2600ea",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "MTyTl_K3Qy5v_bfDXsryA",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "gMoAndIRRUV39tLR2QlWo",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.652Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "69a16acd-e3e9-46e9-aa55-67b82b9f412c",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "gMoAndIRRUV39tLR2QlWo",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.586Z",
+        "finishedAt": "2026-02-25T14:04:28.627Z",
+        "durationMs": 90
+      },
+      {
+        "id": "f8bc70bc-8512-4fb1-a824-c7b09bdb0f49",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "MTyTl_K3Qy5v_bfDXsryA",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "gMoAndIRRUV39tLR2QlWo",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.650Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "4631beba-817a-4bdd-857b-5eac657c0ff4",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "GLRqeZNmFbS4TnKujplDm",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.538Z",
+        "finishedAt": "2026-02-25T14:04:28.617Z",
+        "durationMs": 44
+      },
+      {
+        "id": "7a70c779-6302-4378-948b-3ca040bf9dde",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "GLRqeZNmFbS4TnKujplDm",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.587Z",
+        "finishedAt": "2026-02-25T14:04:28.617Z",
+        "durationMs": 44
+      },
+      {
+        "id": "9c87ba7c-a985-43cd-ac05-fcb2d2d2c37c",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "xIb8FSOQGXQfWJ_juOCZt",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.587Z",
+        "finishedAt": "2026-02-25T14:04:28.626Z",
+        "durationMs": 53
+      },
+      {
+        "id": "aca8a0a1-a128-4889-93f2-e439effbe568",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "X7_1FJV6zozMK68HRIjPb",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.539Z",
+        "finishedAt": "2026-02-25T14:04:28.627Z",
+        "durationMs": 90
+      },
+      {
+        "id": "322f75a9-1083-4f9e-9893-616d56a58192",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "gMoAndIRRUV39tLR2QlWo",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "uploadVideo",
+            "title": "Upload Video",
+            "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.538Z",
+        "finishedAt": "2026-02-25T14:04:28.627Z",
+        "durationMs": 90
+      },
+      {
+        "id": "66afe892-2b25-4248-a4fe-785ff7dfaa8c",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "MTyTl_K3Qy5v_bfDXsryA",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "gMoAndIRRUV39tLR2QlWo",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.649Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "6ffe5636-99db-4bd9-81a8-5dfe58ea0315",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "X7_1FJV6zozMK68HRIjPb",
+        "status": "success",
+        "inputs": {
+          "data": {
+            "type": "text",
+            "title": "Text Node",
+            "textValue": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          },
+          "dependencies": []
+        },
+        "outputs": {
+          "output": {
+            "text": "You are a professional marketing copywriter. Generate a compelling one-paragraph product description."
+          }
+        },
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.587Z",
+        "finishedAt": "2026-02-25T14:04:28.627Z",
+        "durationMs": 90
+      },
+      {
+        "id": "34d7e43a-716f-41cd-b2d0-8056bff16e70",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "MTyTl_K3Qy5v_bfDXsryA",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "gMoAndIRRUV39tLR2QlWo",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.651Z",
+        "finishedAt": null,
+        "durationMs": null
+      },
+      {
+        "id": "91664237-ed06-46c3-b743-9885d8004351",
+        "runId": "ec9f947e-7160-4440-bf52-78eaac93e213",
+        "nodeId": "MTyTl_K3Qy5v_bfDXsryA",
+        "status": "running",
+        "inputs": {
+          "data": {
+            "type": "extractFrame",
+            "title": "Extract Frame from Video",
+            "timestamp": "50%"
+          },
+          "dependencies": [
+            {
+              "nodeId": "gMoAndIRRUV39tLR2QlWo",
+              "output": {
+                "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              }
+            }
+          ]
+        },
+        "outputs": null,
+        "error": null,
+        "startedAt": "2026-02-25T14:04:28.671Z",
         "finishedAt": null,
         "durationMs": null
       }
