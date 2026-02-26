@@ -12,11 +12,13 @@ const callbackSchema = z.object({
   durationMs: z.number().optional(),
 });
 
-function verifySignature(body: string, signature: string | null) {
+function verifySignature(payload: { runId: string, nodeId: string }, signature: string | null) {
   const secret = process.env.TRIGGER_CALLBACK_SECRET;
   if (!secret) return false;
   if (!signature) return false;
-  const digest = createHmac("sha256", secret).update(body).digest("hex");
+  const digest = createHmac("sha256", secret)
+    .update(`${payload.runId}:${payload.nodeId}`)
+    .digest("hex");
   const expected = Buffer.from(digest, "utf8");
   const received = Buffer.from(signature, "utf8");
   if (expected.length !== received.length) return false;
@@ -26,11 +28,18 @@ function verifySignature(body: string, signature: string | null) {
 export async function POST(request: Request) {
   const body = await request.text();
   const signature = request.headers.get("x-weaveflow-signature");
-  if (!verifySignature(body, signature)) {
+  let parsedBody;
+  try {
+    parsedBody = JSON.parse(body);
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+  }
+
+  if (!verifySignature(parsedBody, signature)) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
   }
 
-  const parsed = callbackSchema.safeParse(JSON.parse(body));
+  const parsed = callbackSchema.safeParse(parsedBody);
   if (!parsed.success) {
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }

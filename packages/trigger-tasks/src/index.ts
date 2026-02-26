@@ -20,8 +20,10 @@ async function postCallback(callbackUrl: string | undefined, payload: Record<str
   const secret = process.env.TRIGGER_CALLBACK_SECRET;
   if (!secret) return;
   const body = JSON.stringify(payload);
-  const signature = createHmac("sha256", secret).update(body).digest("hex");
-  await fetch(callbackUrl, {
+  const signature = createHmac("sha256", secret)
+    .update(`${payload.runId}:${payload.nodeId}`)
+    .digest("hex");
+  const res = await fetch(callbackUrl, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -29,6 +31,11 @@ async function postCallback(callbackUrl: string | undefined, payload: Record<str
     },
     body,
   });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Webhook callback failed (${res.status}): ${text}`);
+  }
 }
 
 /**
