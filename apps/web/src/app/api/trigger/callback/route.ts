@@ -12,17 +12,18 @@ const callbackSchema = z.object({
   durationMs: z.number().optional(),
 });
 
-function verifySignature(payload: { runId: string, nodeId: string }, signature: string | null) {
+function verifySignature(payload: { runId: string, nodeId: string }, signature: string | null): string | null {
   const secret = process.env.TRIGGER_CALLBACK_SECRET;
-  if (!secret) return false;
-  if (!signature) return false;
+  if (!secret) return "Missing TRIGGER_CALLBACK_SECRET in Vercel environment";
+  if (!signature) return "Missing x-weaveflow-signature header";
   const digest = createHmac("sha256", secret)
     .update(`${payload.runId}:${payload.nodeId}`)
     .digest("hex");
   const expected = Buffer.from(digest, "utf8");
   const received = Buffer.from(signature, "utf8");
-  if (expected.length !== received.length) return false;
-  return timingSafeEqual(expected, received);
+  if (expected.length !== received.length) return "Invalid signature length";
+  if (!timingSafeEqual(expected, received)) return `Hash mismatch for payload ${payload.runId}:${payload.nodeId}`;
+  return null;
 }
 
 export async function POST(request: Request) {
@@ -35,8 +36,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  if (!verifySignature(parsedBody, signature)) {
-    return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
+  const sigError = verifySignature(parsedBody, signature);
+  if (sigError) {
+    return NextResponse.json({ error: `Signature Error: ${sigError}` }, { status: 401 });
   }
 
   const parsed = callbackSchema.safeParse(parsedBody);
