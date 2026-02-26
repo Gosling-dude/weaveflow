@@ -68,10 +68,11 @@ async function uploadBinaryToTransloadit(data: Uint8Array, fileName: string, mim
 
   const assembly = (await createRes.json()) as {
     assembly_url: string;
+    uploads?: Array<Record<string, unknown>>;
     results?: Record<string, Array<Record<string, unknown>>>;
   };
 
-  const initial = assembly.results?.upload?.[0];
+  const initial = assembly.uploads?.[0] || assembly.results?.[':original']?.[0] || assembly.results?.upload?.[0];
   const initialUrl = initial?.ssl_url ?? initial?.url;
   if (typeof initialUrl === "string") return initialUrl;
 
@@ -79,8 +80,11 @@ async function uploadBinaryToTransloadit(data: Uint8Array, fileName: string, mim
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const pollRes = await fetch(assembly.assembly_url, { cache: "no-store" });
     if (!pollRes.ok) continue;
-    const poll = (await pollRes.json()) as { results?: Record<string, Array<Record<string, unknown>>> };
-    const row = poll.results?.upload?.[0];
+    const poll = (await pollRes.json()) as {
+      uploads?: Array<Record<string, unknown>>;
+      results?: Record<string, Array<Record<string, unknown>>>;
+    };
+    const row = poll.uploads?.[0] || poll.results?.[':original']?.[0] || poll.results?.upload?.[0];
     const url = row?.ssl_url ?? row?.url;
     if (typeof url === "string") return url;
   }
