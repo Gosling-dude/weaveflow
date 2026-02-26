@@ -184,9 +184,7 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
     n6.data.videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
     const n7 = createNode("extractFrame", 360, 650);
     const n8 = createNode("text", 640, 560);
-    n8.data.textValue =
-      "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.";
-    const n9 = createNode("llm", 980, 380);
+    "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.";
 
     const edges: Edge[] = [
       { id: nanoid(), source: n1.id, target: n2.id, sourceHandle: "output_image", targetHandle: "image_url", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
@@ -194,12 +192,8 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
       { id: nanoid(), source: n3.id, target: n5.id, sourceHandle: "output", targetHandle: "system_prompt", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
       { id: nanoid(), source: n4.id, target: n5.id, sourceHandle: "output", targetHandle: "user_message", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
       { id: nanoid(), source: n6.id, target: n7.id, sourceHandle: "output_video", targetHandle: "video_url", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
-      { id: nanoid(), source: n5.id, target: n9.id, sourceHandle: "output", targetHandle: "user_message", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
-      { id: nanoid(), source: n2.id, target: n9.id, sourceHandle: "output_image", targetHandle: "images", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
-      { id: nanoid(), source: n7.id, target: n9.id, sourceHandle: "output_image", targetHandle: "images", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
-      { id: nanoid(), source: n8.id, target: n9.id, sourceHandle: "output", targetHandle: "system_prompt", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
     ];
 
-    set((state) => ({ ...pushHistory(state), nodes: [n1, n2, n3, n4, n5, n6, n7, n8, n9], edges }));
+    set((state) => ({ ...pushHistory(state), nodes: [n1, n2, n3, n4, n5, n6, n7, n8], edges }));
   },
 }));
