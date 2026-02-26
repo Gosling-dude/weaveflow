@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
     return NextResponse.json({
-        hasCallbackSecret: !!process.env.TRIGGER_CALLBACK_SECRET,
-        len: process.env.TRIGGER_CALLBACK_SECRET?.length
+        triggerKeyPrefix: process.env.TRIGGER_SECRET_KEY?.slice(0, 7) || "missing"
     });
 }

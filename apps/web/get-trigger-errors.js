@@ -1,11 +1,21 @@
-import { configure } from "@trigger.dev/sdk/v3";
-import * as dotenv from "dotenv";
-dotenv.config({ path: ".env.local" });
+const { runs } = require("@trigger.dev/sdk/v3");
 
-async function main() {
-    const result = await fetch("https://api.trigger.dev/api/v1/projects/proj_ndcpenrxtkjmcmjvpfce/environments", {
-        headers: { Authorization: `Bearer ${process.env.TRIGGER_SECRET_KEY}` }
-    }).then(r => r.json());
-    console.log(JSON.stringify(result, null, 2));
+async function fetchErrors() {
+    process.env.TRIGGER_SECRET_KEY = "tr_prod_O5O88IAl2EaP5nZ8cO4UfDkG";
+    console.log("Fetching latest runs from Trigger.dev production...\n");
+
+    const runList = await runs.list({
+        limit: 5,
+    });
+
+    for (const run of runList.data) {
+        console.log(`Run ${run.id} - Task: ${run.taskIdentifier} - Status: ${run.status}`);
+        if (run.status === "FAILED" || run.status === "CRASHED") {
+            const details = await runs.retrieve(run.id);
+            console.log(`  ERROR:`);
+            console.log(JSON.stringify(details.error, null, 2));
+        }
+    }
 }
-main().catch(console.error);
+
+fetchErrors().catch(console.error);

@@ -2,6 +2,7 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { z } from "zod";
+import { resumeRun } from "@/lib/executor";
 
 export const dynamic = "force-dynamic";
 
@@ -80,7 +81,6 @@ export async function POST(request: Request) {
 
   // Trigger next step of the pipeline if the node actually finished
   if (payload.status !== "running") {
-    const { resumeRun } = await import("@/lib/executor");
     await resumeRun(payload.runId);
   }
 
