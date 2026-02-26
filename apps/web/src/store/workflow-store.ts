@@ -179,11 +179,17 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
     n3.data.textValue = "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.";
     const n4 = createNode("text", 80, 470);
     n4.data.textValue = "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.";
+    const n6 = createNode("uploadVideo", 80, 650);
+    n6.data.videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
+    const n7 = createNode("extractFrame", 360, 650);
+    const n8 = createNode("text", 640, 560);
+    n8.data.textValue = "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.";
 
     const edges: Edge[] = [
       { id: nanoid(), source: n1.id, target: n2.id, sourceHandle: "output_image", targetHandle: "image_url", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n6.id, target: n7.id, sourceHandle: "output_video", targetHandle: "video_url", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
     ];
 
-    set((state) => ({ ...pushHistory(state), nodes: [n1, n2, n3, n4], edges }));
+    set((state) => ({ ...pushHistory(state), nodes: [n1, n2, n3, n4, n6, n7, n8], edges }));
   },
 }));
