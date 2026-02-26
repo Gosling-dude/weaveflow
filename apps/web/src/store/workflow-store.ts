@@ -6,7 +6,7 @@ import { nanoid } from "nanoid/non-secure";
 
 export type WorkflowNodeData = {
   title: string;
-  type: "text" | "uploadImage" | "uploadVideo" | "llm" | "cropImage" | "extractFrame";
+  type: "text" | "uploadImage" | "uploadVideo" | "llm" | "cropImage" | "extractFrame" | "output";
   running?: boolean;
   result?: string;
   error?: string;
@@ -58,6 +58,7 @@ const allowedTargetTypes: Record<string, string[]> = {
   height_percent: ["text"],
   video_url: ["video"],
   timestamp: ["text"],
+  output: ["text", "image", "video"],
 };
 
 function outputTypeFromSourceHandle(handle = "output") {
@@ -83,7 +84,9 @@ function createNode(type: WorkflowNodeData["type"], x = 180, y = 120): Node<Work
                 ? "Extract Frame from Video"
                 : type === "llm"
                   ? "Run Any LLM"
-                  : "Text Node",
+                  : type === "output"
+                    ? "Workflow Output"
+                    : "Text Node",
       type,
       textValue: type === "text" ? "" : undefined,
       timestamp: type === "extractFrame" ? "50%" : undefined,
@@ -179,17 +182,28 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
     n3.data.textValue = "You are a professional marketing copywriter. Generate a compelling one-paragraph product description.";
     const n4 = createNode("text", 80, 470);
     n4.data.textValue = "Product: Wireless Bluetooth Headphones. Features: Noise cancellation, 30-hour battery, foldable design.";
+    const n5 = createNode("llm", 640, 200);
     const n6 = createNode("uploadVideo", 80, 650);
     n6.data.videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
     const n7 = createNode("extractFrame", 360, 650);
     const n8 = createNode("text", 640, 560);
     n8.data.textValue = "You are a social media manager. Create a tweet-length marketing post based on the product image and video frame.";
+    const n9 = createNode("llm", 980, 380);
+    const n10 = createNode("output", 1320, 380);
 
     const edges: Edge[] = [
       { id: nanoid(), source: n1.id, target: n2.id, sourceHandle: "output_image", targetHandle: "image_url", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n2.id, target: n5.id, sourceHandle: "output_image", targetHandle: "images", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n3.id, target: n5.id, sourceHandle: "output", targetHandle: "system_prompt", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n4.id, target: n5.id, sourceHandle: "output", targetHandle: "user_message", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
       { id: nanoid(), source: n6.id, target: n7.id, sourceHandle: "output_video", targetHandle: "video_url", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n5.id, target: n9.id, sourceHandle: "output", targetHandle: "user_message", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n2.id, target: n9.id, sourceHandle: "output_image", targetHandle: "images", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n7.id, target: n9.id, sourceHandle: "output_image", targetHandle: "images", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n8.id, target: n9.id, sourceHandle: "output", targetHandle: "system_prompt", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
+      { id: nanoid(), source: n9.id, target: n10.id, sourceHandle: "output", targetHandle: "output", type: "smoothstep", animated: true, style: { stroke: "#8b5cf6" } },
     ];
 
-    set((state) => ({ ...pushHistory(state), nodes: [n1, n2, n3, n4, n6, n7, n8], edges }));
+    set((state) => ({ ...pushHistory(state), nodes: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n10], edges }));
   },
 }));

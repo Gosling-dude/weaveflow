@@ -146,11 +146,17 @@ async function proceedWithRun(runId: string, executionNodes: InputNode[], execut
     return;
   }
 
+  let localFinished = false;
+
   // Trigger ready nodes
   await Promise.all(
     readyQueue.map(async (node) => {
       const dependencyIds = incoming.get(node.id) ?? [];
       const nodeStarted = Date.now();
+
+      // Basic deduplication for concurrent webhooks
+      const existing = await prisma.runNode.findFirst({ where: { runId, nodeId: node.id } });
+      if (existing) return;
 
       await prisma.runNode.create({
         data: {
@@ -174,8 +180,8 @@ async function proceedWithRun(runId: string, executionNodes: InputNode[], execut
         });
 
         // If node was external trigger task, output is just {}, we wait for webhook.
-        // If node was pure local execution (text, uploadImage URL resolution), it returns actual object.
-        const returnedKeys = Object.keys(output).filter(k => k !== "triggerId");
+        // If node was pure local execution (text, uploadImage URL resolution, output), it returns actual object.
+        const returnedKeys = Object.keys(output).filter((k) => k !== "triggerId");
         if (returnedKeys.length > 0) {
           await prisma.runNode.updateMany({
             where: { runId, nodeId: node.id },
@@ -186,8 +192,7 @@ async function proceedWithRun(runId: string, executionNodes: InputNode[], execut
               durationMs: Date.now() - nodeStarted,
             },
           });
-          // Proceed DAG check recursively since a local node finished immediately
-          await proceedWithRun(runId, executionNodes, executionEdges);
+          localFinished = true;
         }
       } catch (error) {
         await prisma.runNode.updateMany({
@@ -199,11 +204,15 @@ async function proceedWithRun(runId: string, executionNodes: InputNode[], execut
             durationMs: Date.now() - nodeStarted,
           },
         });
-        // Proceed DAG check recursively to fail dependent nodes
-        await proceedWithRun(runId, executionNodes, executionEdges);
+        localFinished = true;
       }
     }),
   );
+
+  if (localFinished) {
+    // Proceed DAG check recursively since one or more local nodes finished immediately
+    await proceedWithRun(runId, executionNodes, executionEdges);
+  }
 }
 
 async function executeNodeThroughTrigger(params: {

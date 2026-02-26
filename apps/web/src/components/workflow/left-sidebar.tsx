@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Type, ImageUp, Video, Bot, Crop, Frame } from "lucide-react";
+import { Search, Type, ImageUp, Video, Bot, Crop, Frame, FileOutput } from "lucide-react";
 import { useState } from "react";
 import { useWorkflowStore, type WorkflowNodeData } from "@/store/workflow-store";
 
@@ -12,6 +12,7 @@ const items: Array<{ title: string; type: WorkflowNodeData["type"]; icon: React.
   { title: "Run LLM", type: "llm", icon: Bot },
   { title: "Crop Image", type: "cropImage", icon: Crop },
   { title: "Extract Frame", type: "extractFrame", icon: Frame },
+  { title: "Output", type: "output", icon: FileOutput },
 ];
 
 export default function LeftSidebar() {

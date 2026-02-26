@@ -20,6 +20,7 @@ import { UploadVideoNode } from "@/components/nodes/upload-video-node";
 import { CropImageNode } from "@/components/nodes/crop-image-node";
 import { ExtractFrameNode } from "@/components/nodes/extract-frame-node";
 import { LlmNode } from "@/components/nodes/llm-node";
+import { OutputNode } from "@/components/nodes/output-node";
 import { useWorkflowStore } from "@/store/workflow-store";
 
 const nodeTypes: NodeTypes = {
@@ -29,6 +30,7 @@ const nodeTypes: NodeTypes = {
   cropImage: CropImageNode,
   extractFrame: ExtractFrameNode,
   llm: LlmNode,
+  output: OutputNode,
 };
 
 function EditorContent() {
@@ -100,15 +102,22 @@ function EditorContent() {
           typeof runNode.outputs === "object" && runNode.outputs !== null && "output" in runNode.outputs
             ? (runNode.outputs as { output?: unknown }).output
             : undefined;
+        let unwrapped = outputContainer;
+        if (typeof unwrapped === "object" && unwrapped !== null && "result" in unwrapped) {
+          unwrapped = (unwrapped as { result: unknown }).result;
+        }
+
         const outputText =
-          typeof outputContainer === "object" && outputContainer !== null && "text" in outputContainer
-            ? (outputContainer as { text?: unknown }).text
-            : typeof outputContainer === "string"
-              ? outputContainer
-              : undefined;
+          typeof unwrapped === "object" && unwrapped !== null && "text" in unwrapped
+            ? (unwrapped as { text?: unknown }).text
+            : typeof unwrapped === "string"
+              ? unwrapped
+              : typeof unwrapped === "number"
+                ? String(unwrapped)
+                : undefined;
         const outputUrl =
-          typeof outputContainer === "object" && outputContainer !== null && "url" in outputContainer
-            ? (outputContainer as { url?: unknown }).url
+          typeof unwrapped === "object" && unwrapped !== null && "url" in unwrapped
+            ? (unwrapped as { url?: unknown }).url
             : undefined;
 
         updateNodeData(runNode.nodeId, {
