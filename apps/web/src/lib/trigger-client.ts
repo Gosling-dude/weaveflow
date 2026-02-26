@@ -12,11 +12,14 @@ function ensureConfigured() {
   configured = true;
 }
 
-export async function triggerAndWait<TPayload extends object, TOutput = unknown>(taskId: string, payload: TPayload): Promise<TOutput> {
+export async function triggerAndWait<TPayload extends object>(taskId: string, payload: TPayload): Promise<{ triggerId?: string }> {
   ensureConfigured();
-  const result = await tasks.trigger(taskId, payload as never);
-
-  // Since we're using webhooks for outputs via the Next.js API, we don't return the output here.
-  // We just return a dummy object because the actual output will be saved to the database via the webhook.
-  return {} as TOutput;
+  try {
+    const result = await tasks.trigger(taskId, payload as never);
+    console.log(`[Trigger.dev] Successfully enqueued task '${taskId}'. Trigger Run ID:`, result.id);
+    return { triggerId: result.id };
+  } catch (error) {
+    console.error("Trigger SDK Error:", error);
+    throw new Error(`Failed to enqueue task '${taskId}': ${error instanceof Error ? error.message : "Unknown API error"}`);
+  }
 }

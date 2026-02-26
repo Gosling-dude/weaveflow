@@ -175,7 +175,8 @@ async function proceedWithRun(runId: string, executionNodes: InputNode[], execut
 
         // If node was external trigger task, output is just {}, we wait for webhook.
         // If node was pure local execution (text, uploadImage URL resolution), it returns actual object.
-        if (Object.keys(output).length > 0) {
+        const returnedKeys = Object.keys(output).filter(k => k !== "triggerId");
+        if (returnedKeys.length > 0) {
           await prisma.runNode.updateMany({
             where: { runId, nodeId: node.id },
             data: {
@@ -249,7 +250,7 @@ async function executeNodeThroughTrigger(params: {
       heightPercent: asPercent(firstConnectedOutput(params.incomingEdges, outputsBySource, "height_percent") ?? crop.heightPercent, 100),
     };
 
-    return triggerAndWait<typeof payload, { url: string }>("crop-image-task", payload);
+    return triggerAndWait<typeof payload>("crop-image-task", payload);
   }
 
   if (params.node.type === "extractFrame") {
@@ -264,7 +265,7 @@ async function executeNodeThroughTrigger(params: {
       videoUrl,
       timestamp: String(firstConnectedOutput(params.incomingEdges, outputsBySource, "timestamp") ?? params.node.data.timestamp ?? "0"),
     };
-    return triggerAndWait<typeof payload, { url: string }>("extract-frame-task", payload);
+    return triggerAndWait<typeof payload>("extract-frame-task", payload);
   }
 
   if (params.node.type === "llm") {
@@ -286,7 +287,7 @@ async function executeNodeThroughTrigger(params: {
       images: imageOutputs,
     };
 
-    return triggerAndWait<typeof payload, { text: string }>("llm-node-task", payload);
+    return triggerAndWait<typeof payload>("llm-node-task", payload);
   }
 
   // If we reach here, we have an unsupported node type in the database
