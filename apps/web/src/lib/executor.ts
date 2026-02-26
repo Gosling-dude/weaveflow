@@ -227,6 +227,11 @@ async function executeNodeThroughTrigger(params: {
     return { url: String(params.node.data.videoUrl ?? "") };
   }
 
+  if (params.node.type === "output") {
+    const outputValue = firstConnectedOutput(params.incomingEdges, outputsBySource, "output");
+    return { result: outputValue ?? null };
+  }
+
   if (params.node.type === "cropImage") {
     const crop = parseCropData(params.node.data.crop);
     const imageFromConnection = firstConnectedOutput(params.incomingEdges, outputsBySource, "image_url");
@@ -284,7 +289,8 @@ async function executeNodeThroughTrigger(params: {
     return triggerAndWait<typeof payload, { text: string }>("llm-node-task", payload);
   }
 
-  return {};
+  // If we reach here, we have an unsupported node type in the database
+  throw new Error(`Execution failed: Unsupported node type '${params.node.type}'`);
 }
 
 function safeJson(value: unknown): Prisma.InputJsonValue {
