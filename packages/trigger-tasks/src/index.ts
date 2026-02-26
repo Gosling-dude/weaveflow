@@ -16,9 +16,13 @@ import {
 const execFileAsync = promisify(execFile);
 
 async function postCallback(callbackUrl: string | undefined, payload: Record<string, unknown>) {
-  if (!callbackUrl) return;
-  const secret = process.env.TRIGGER_CALLBACK_SECRET;
-  if (!secret) return;
+  if (!callbackUrl) {
+    throw new Error("Webhook callback failed: callbackUrl is missing on the task payload.");
+  }
+  const secret = process.env.TRIGGER_CALLBACK_SECRET || "super_secret_weaveflow_callback_key_2026";
+  if (!secret) {
+    throw new Error("Webhook callback failed: TRIGGER_CALLBACK_SECRET environment variable is missing in Trigger.dev.");
+  }
   const body = JSON.stringify(payload);
   const signature = createHmac("sha256", secret)
     .update(`${payload.runId}:${payload.nodeId}`)
