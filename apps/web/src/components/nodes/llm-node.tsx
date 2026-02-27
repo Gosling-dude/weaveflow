@@ -6,7 +6,7 @@ import { useNodeConnections } from "@xyflow/react";
 import { NodeShell } from "./node-shell";
 import { useWorkflowStore, type WorkflowNodeData } from "@/store/workflow-store";
 
-const models = ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash"];
+const models = ["gemini-2.0-flash", "gemini-1.5-pro-latest", "gemini-1.5-flash-latest", "gemini-1.5-flash-8b"];
 
 type WorkflowNodeProps = NodeProps & { id: string; data: WorkflowNodeData };
 
